@@ -5693,4 +5693,14 @@ footer.footer-lux,
     font-size: 1rem;
     box-sizing: border-box;
   }
+
+ .social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
   
