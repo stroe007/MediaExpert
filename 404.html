@@ -107,7 +107,7 @@ footer.footer-lux {
 <header class="ak-site_header ak-style1 ak-sticky_header">
 <div class="top-header-info">
 <div class="email-info">
-<a href="emailto:example@email.com"></a>
+<a href="emailto:example@email.com">Switzerland</a>
 <p class="location-desp"> </p>
 </div>
 <div style="display: flex; gap: 16px; align-items: center;">
@@ -356,77 +356,196 @@ footer.footer-lux {
 </div>
 <!-- End offcanvas body -->
 <!-- End Header Section -->
-<section>
-<div class="ak-height-135 ak-height-lg-80"></div>
-<div class="container">
-<div class="ak-errorpage-content">
-<div class="error-logo">
-<img alt="..." src="assets/img/shop1.webp"/>
+<section style="padding: 80px 0; background-color: #0d0d0d; color: white; text-align: center;">
+  <div class="container">
+    <div class="ak-errorpage-content">
+      <div class="error-logo" style="margin-bottom: 40px;">
+        <img alt="Elena Enache Shop Coming Soon" src="assets/img/shop1.webp" style="max-width: 200px;" />
+      </div>
+      <div class="error-content">
+        <h1 class="error-title" style="font-size: 2rem; color: #FFD700; margin-bottom: 20px;">
+          🚧 Oops! 404: GAINS NOT FOUND!  
+          <br/>🌟 Coming Soon: The Full Elena Enache Experience! 🌟
+        </h1>
+        <p class="error-desp" style="max-width: 800px; margin: 0 auto 40px; line-height: 1.6; font-size: 1.1rem;">
+          Don’t rack the weights just yet, champ...  
+          The official <strong>Elena Enache – Personal Trainer</strong> blog is on its way and will soon become your ultimate hub for real inspiration, powerful motivation, and expert guidance in fitness, nutrition, and personal transformation.
+          <br/><br/>
+          Meanwhile, our <strong>exclusive online store</strong> is also in the works — bringing you premium gear, top-tier workout essentials, and limited-edition activewear that fuses luxury with performance.
+          <br/><br/>
+          💫 Stay tuned – a world designed for <em>you</em>, your body, and your evolution is just around the corner.
+        </p>
+        <!-- Functional Button Link -->
+        <div class="error-btn-content">
+          <a class="golden-error-btn" href="index.html" style="display: inline-flex; align-items: center; background-color: #FFD700; color: #000; font-weight: bold; padding: 12px 24px; border-radius: 30px; text-decoration: none; transition: background-color 0.3s;">
+            <span class="btn-text" style="margin-right: 10px;">BACK TO HOME</span>
+            <span class="btn-icon">
+              <svg fill="#000" height="24" viewBox="0 0 20 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12l7-7 7 7M5 12l7 7 7-7M5 12l7-7 7 7" stroke="currentColor" stroke-width="2"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Start Subscribe Email -->
+<section class="lux-newsletter-hero">
+<div class="lux-moving-background"></div>
+<div class="lux-newsletter-container">
+<h2>Elevate Your Fitness Journey</h2>
+<p>Join our VIP list and receive weekly insights on workouts, mindset, nutrition &amp; exclusive offers — straight to your inbox.</p>
+<form class="lux-newsletter-form">
+<input placeholder="Enter your email address..." required="" type="email">
+<button type="submit">Subscribe Now</button>
+</input></form>
 </div>
-<div class="error-content">
-<div class="error-content">
-<h1 class="error-title">🚧 Oops! 404: GAINS NOT FOUND!</h1>
-<p class="error-desp">Don’t rack the weights yet, champ...</p>
-<!-- BUTON LINK FUNCȚIONAL -->
-<div class="error-btn-content">
-<a class="golden-error-btn" href="index.html">
-<span class="btn-text">BACK TO HOME</span>
-<span class="btn-icon">
-<svg fill="white" height="24" viewbox="0 0 20 24" width="20" xmlns="http://www.w3.org/2000/svg">
-<path d="M5 12l7-7 7 7M5 12l7 7 7-7M5 12l7-7 7 7" stroke="currentColor" stroke-width="2"></path>
-</svg>
-</span>
-</a>
-</div>
-</div>
+</section>
 <style>
-.golden-error-btn {
-    background: linear-gradient(45deg, #FFD700 0%, #D4AF37 100%);
-    border: none;
-    border-radius: 8px;
-    padding: 16px 35px;
-    color: #2c2c2c !important;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-    border: 2px solid rgba(255, 215, 0, 0.3);
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap');
+
+/* Transparent section - NO background */
+.lux-newsletter-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 8rem 2rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: transparent;
 }
 
-.golden-error-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(255, 215, 0, 0.5);
-    color: #1a1a1a !important;
+/* Moving animated glowing gradient behind newsletter */
+.lux-moving-background {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle at 30% 50%, rgba(255, 215, 0, 0.07), transparent 70%);
+  animation: moveGlow 20s ease-in-out infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(40px);
 }
 
-.btn-text {
-    position: relative;
-    z-index: 1;
+@keyframes moveGlow {
+  0% {
+    transform: translateX(0) translateY(0);
+    background-position: left center;
+  }
+  50% {
+    transform: translateX(10%) translateY(-5%);
+    background-position: center center;
+  }
+  100% {
+    transform: translateX(-10%) translateY(5%);
+    background-position: right center;
+  }
 }
 
-.btn-icon {
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s ease;
+/* Newsletter card */
+.lux-newsletter-container {
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(14px);
+  border-radius: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  box-shadow: 0 0 60px rgba(255, 215, 0, 0.1), 0 0 20px rgba(255, 255, 255, 0.03) inset;
 }
 
-.golden-error-btn:hover .btn-icon {
-    transform: translateX(3px);
+.lux-newsletter-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #ffdd00, #fff7cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@media (max-width: 768px) {
-    .golden-error-btn {
-        width: 100%;
-        justify-content: center;
-        padding: 14px 20px;
-    }
+.lux-newsletter-container p {
+  font-family: 'Inter', sans-serif;
+  color: #ddd;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+/* Form styling */
+.lux-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.lux-newsletter-form input {
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.lux-newsletter-form input::placeholder {
+  color: #aaa;
+}
+
+.lux-newsletter-form input:focus {
+  border-color: #ffd700;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lux-newsletter-form button {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffd700, #fceabb);
+  border: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+}
+
+.lux-newsletter-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .lux-newsletter-form {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .lux-newsletter-form input {
+    flex: 1;
+  }
+
+  .lux-newsletter-form button {
+    margin-left: 1rem;
+    white-space: nowrap;
+  }
 }
 </style>
+<!-- End Subscribe Email -->
+
 <!-- Start Footer -->
 <footer class="footer-lux">
 <div class="footer-glass"></div>
@@ -451,10 +570,10 @@ footer.footer-lux {
 <div class="footer-section boxed">
 <h5 class="footer-title">SOCIAL</h5>
 <ul class="social-links">
-<li><a href="https://www.facebook.com/enache.elena.587">Facebook</a></li>
-<li><a href="https://www.instagram.com/elena_enachefit/">Instagram</a></li>
-<li><a href="https://www.tiktok.com/@elena_enachefit">Tiktok</a></li>
-<li><a href="https://www.youtube.com/@elenaenachefitness25">Youtube</a></li>
+<li><a href="https://www.facebook.com/enache.elena.587"></a></li>
+<li><a href="https://www.instagram.com/elena_enachefit/"></a></li>
+<li><a href="https://www.tiktok.com/@elena_enachefit"></a></li>
+<li><a href="https://www.youtube.com/@elenaenachefitness25"></a></li>
 </ul>
 </div>
 <div class="footer-section center">
@@ -678,5 +797,5 @@ footer.footer-lux {
 <script src="assets/js/plugins/lightgallery.min.js"></script>
 <script src="assets/js/plugins/swiper.min.js"></script>
 <script src="assets/js/main.js"></script>
-</div></div></div></section></body>
+</body>
 </html>
