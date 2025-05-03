@@ -15,46 +15,90 @@
 <link href="assets/css/plugins/aos.css" rel="stylesheet"/>
 <link href="assets/css/plugins/lightgallery.min.css" rel="stylesheet"/>
 <link href="assets/css/plugins/swiper.min.css" rel="stylesheet"/>
-<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 <style>
-/* Full-width layout fix for 404 page similar to contact-us */
-.ak-errorpage-content {
-  width: 100%;
-  max-width: 100%;
-  padding: 2rem;
-  margin: 0 auto;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.error-logo img {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
-.error-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
 @media (max-width: 768px) {
-  .ak-errorpage-content {
-    padding: 1rem;
-  }
-
-  .error-title {
-    font-size: 1.5rem;
-  }
-
-  .error-desp {
-    font-size: 1rem;
+  .footer-grid {
     padding: 0 1rem;
   }
 
-  .error-btn-content {
-    padding-top: 1rem;
+  .footer-lux .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer-section ul {
+    align-items: center;
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonial-img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-info {
+    padding: 0 1rem;
+  }
+}
+</style>
+<style>
+footer.footer-lux {
+  width: 100%;
+  background: linear-gradient(to right, rgba(255,215,0,0.05), rgba(0,0,0,0.1));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 0;
+  box-sizing: border-box;
+}
+
+.footer-lux .container {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .footer-section,
+  .footer-section ul,
+  .footer-section li {
+    align-items: center;
+    text-align: center;
+    width: 100%;
   }
 }
 </style></head>
@@ -175,7 +219,7 @@
     transform: scale(0.9);
 }
 </style>
-<div class="social-links">
+
 <a aria-label="Facebook" class="social-icon" data-aos="zoom-in" data-aos-delay="100" href="https://www.facebook.com/enache.elena.587">
 <img alt="Facebook" height="40" src="assets/img/Facebook.webp" width="40"/>
 </a>
@@ -537,7 +581,7 @@
 }
 
 .phone-button {
-  background: linear-gradient(135deg, #ffd700, #fff5cc);
+  background: linear-gradient(135deg, #0375b2, #646360);
   color: #1a1a1a;
   padding: 0.75rem 1.5rem;
   border-radius: 999px;
