@@ -1,550 +1,452 @@
+/*===================================================
+	Template Scripts
+====================================================*/
 (function ($) {
-  ("use strict");
+    "use strict";
 
-  /*
-|--------------------------------------------------------------------------
-| Template Name: Elena Enache Fitness
-by MediaExpertSolutiom
-| Author: Stroe Marius
-| Version: 1.1.0
-|--------------------------------------------------------------------------
-|--------------------------------------------------------------------------
-| TABLE OF CONTENTS:
-|--------------------------------------------------------------------------
-| 1. Mobile Menu
-| 2. Sticky Header
-| 3. Dynamic Background
-| 4. Slick Slider
-| 5. Modal Video
-| 6. Scroll Up
-| 7. Accordion
-| 8. Sticky Content
-| 9. Light Gallery
-| 10. Auto Counter funfact
-| 11. Feature Video scrollingImage
-| 12. Feature Crad Animation
-| 13. Hover add/remove Active Class
-| 14. Price Card Animation
-
-    /*--------------------------------------------------------------
-    Scripts initialization
---------------------------------------------------------------*/
-
-  $.exists = function (selector) {
-    return $(selector).length > 0;
-  };
-
-  $(window).on("load", function () {
-    $(window).trigger("scroll");
-    $(window).trigger("resize");
-  });
-
-  AOS.init({
-    disable: false,
-    startEvent: "DOMContentLoaded",
-    initClassName: "aos-init",
-    animatedClassName: "aos-animate",
-    offset: 100,
-    delay: 0,
-    duration: 500,
-    easing: "ease",
-    once: false,
-    mirror: false,
-  });
-
-  $(function () {
-    $(window).trigger("resize");
-    mainNav();
-    stickyHeader();
-    dynamicBackground();
-    swiperInit();
-    modalVideo();
-    scrollUp();
-  });
-
-  $(window).on("scroll", function () {
-    showScrollUp();
-  });
-
-  /*--------------------------------------------------------------
-     1. Mobile  Menu  
- -----------------------------------------------------------------*/
-
-  function mainNav() {
-    $(".button-offcanva").append(
-      '<span class="button-offcanva-toggle"><span></span></span>'
-    );
-
-    $(".ak-nav").append('<span class="ak-munu_toggle"><span></span></span>');
-    $(".menu-item-has-children").append(
-      '<span class="ak-munu_dropdown_toggle"></span>'
-    );
-    $(".ak-munu_toggle").on("click", function () {
-      $(this)
-        .toggleClass("ak-toggle_active")
-        .siblings(".ak-nav_list")
-        .slideToggle();
-    });
-    $(".ak-munu_dropdown_toggle").on("click", function () {
-      $(this).toggleClass("active").siblings("ul").slideToggle();
-      $(this).parent().toggleClass("active");
+    // Preloader
+    $(window).on("load", function () {
+        $("body").addClass("loaded");
     });
 
-    $(".menu-item-has-black-section").append(
-      '<span class="ak-munu_dropdown_toggle_1"></span>'
-    );
+    $(document).ready(function () {
+        // Sticky Header
+        function stickyHeader() {
+            var primaryHeader = $(".nav-menu-wrapper"),
+                headerClone = primaryHeader.clone();
+            $(".main-header").after('<div class="sticky-header"></div>');
+            $(".sticky-header").html(headerClone);
 
-    $(".ak-munu_dropdown_toggle_1").on("click", function () {
-      $(this).toggleClass("active").siblings("ul").slideToggle();
-      $(this).parent().toggleClass("active");
-    });
+            var headerSelector = document.querySelector(".sticky-header"),
+                triggerPoint = $(".main-header").height(),
+                yOffset = 0;
 
-    $(".ak-mode_btn").on("click", function () {
-      $(this).toggleClass("active");
-      $("body").toggleClass("ak-dark");
-    });
-    // Side Nav
-    $(".ak-icon_btn").on("click", function () {
-      $(".ak-side_header").addClass("active");
-    });
-    $(".ak-close, .ak-side_header_overlay").on("click", function () {
-      $(".ak-side_header").removeClass("active");
-    });
-    //  Menu Text Split
-    $(".ak-animo_links > li > a").each(function () {
-      let xxx = $(this).html().split("").join("</span><span>");
-      $(this).html(`<span class="ak-animo_text"><span>${xxx}</span></span>`);
-    });
-  }
-  /*--------------------------------------------------------------
-     2. Sticky Header
---------------------------------------------------------------*/
-  function stickyHeader() {
-    var $window = $(window);
-    var lastScrollTop = 0;
-    var $header = $(".ak-sticky_header");
-    var headerHeight = $header.outerHeight() + 30;
-
-    $window.scroll(function () {
-      var windowTop = $window.scrollTop();
-
-      if (windowTop >= headerHeight) {
-        $header.addClass("ak-gescout_sticky");
-      } else {
-        $header.removeClass("ak-gescout_sticky");
-        $header.removeClass("ak-gescout_show");
-      }
-
-      if ($header.hasClass("ak-gescout_sticky")) {
-        if (windowTop < lastScrollTop) {
-          $header.addClass("ak-gescout_show");
-        } else {
-          $header.removeClass("ak-gescout_show");
-        }
-      }
-
-      lastScrollTop = windowTop;
-    });
-  }
-
-  /*--------------------------------------------------------------
-     3. Dynamic Background
--------------------------------------------------------------*/
-  function dynamicBackground() {
-    $("[data-src]").each(function () {
-      var src = $(this).attr("data-src");
-      $(this).css({
-        "background-image": "url(" + src + ")",
-      });
-    });
-  }
-
-  /*--------------------------------------------------------------    
-     4. Slick Slider
- --------------------------------------------------------------*/
-
-  function swiperInit() {
-    if ($.exists(".slider_hero_1")) {
-      var swiper = new Swiper(".slider_hero_1", {
-        loop: true,
-        speed: 1500,
-        effect: "coverflow",
-        autoplay: true,
-        slidesPerView: 1,
-        delay: 300,
-        keyboard: {
-          enabled: true,
-        },
-        navigation: {
-          nextEl: ".hero-swiper-button-prev-1",
-          prevEl: ".hero-swiper-button-next-1",
-        },
-      });
-    }
-    if ($.exists(".slider_hero_2")) {
-      var swiper = new Swiper(".slider_hero_2", {
-        loop: true,
-        speed: 1500,
-        parallax: true,
-        zoom: {
-          maxRatio: 5,
-        },
-        watchSlidesProgress: true,
-        // autoplay: true,
-        slidesPerView: 1,
-        delay: 300,
-        keyboard: {
-          enabled: true,
-        },
-        navigation: {
-          nextEl: ".hero-swiper-button-prev-2",
-          prevEl: ".hero-swiper-button-next-2",
-        },
-      });
-    }
-
-    if ($.exists(".slider_2")) {
-      var swiper = new Swiper(".slider_2", {
-        loop: true,
-        speed: 1000,
-        autoplay: false,
-        slidesPerView: "auto",
-        navigation: {
-          nextEl: ".slider_2-prev",
-          prevEl: ".slider_2-next",
-        },
-      });
-    }
-
-    if ($.exists(".partner-client-slider")) {
-      var swiper = new Swiper(".partner-client-slider", {
-        loop: true,
-        speed: 1000,
-        autoplay: true,
-        slidesPerView: "auto",
-        pagination: {
-          clickable: true,
-        },
-      });
-    }
-    if ($.exists(".gallery-slider")) {
-      var swiper = new Swiper(".gallery-slider", {
-        loop: true,
-        speed: 1000,
-        autoplay: true,
-        slidesPerView: "auto",
-        centeredSlides: true,
-        pagination: {
-          clickable: true,
-        },
-      });
-    }
-    if ($.exists(".testimonial-slider-home")) {
-      var swiper = new Swiper(".testimonial-slider-home", {
-        loop: true,
-        speed: 1000,
-        autoplay: true,
-        slidesPerView: "auto",
-        centeredSlides: true,
-        effect: "cube",
-        grabCursor: true,
-        cubeEffect: {
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        },
-        pagination: {
-          clickable: true,
-        },
-      });
-      const swiperContainer = document.querySelector(
-        ".testimonial-slider-home"
-      );
-      swiperContainer.addEventListener("mouseenter", () => {
-        swiper.autoplay.stop();
-      });
-
-      swiperContainer.addEventListener("mouseleave", () => {
-        swiper.autoplay.start();
-      });
-    }
-    if ($.exists(".testimonial-style2-slider")) {
-      var swiper = new Swiper(".testimonial-style2-slider", {
-        loop: true,
-        speed: 800,
-        effect: "fade",
-        // autoplay: true,
-        slidesPerView: "auto",
-      });
-    }
-  }
-
-  /*--------------------------------------------------------------
-     5. Modal Video
- --------------------------------------------------------------*/
-  function modalVideo() {
-    $(document).on("click", ".ak-video-open", function (e) {
-      e.preventDefault();
-      var video = $(this).attr("href");
-      video = video.split("?v=")[1].trim();
-      $(".ak-video-popup-container iframe").attr(
-        "src",
-        `https://www.youtube.com/embed/${video}`
-      );
-      $(".ak-video-popup").addClass("active");
-    });
-    $(".ak-video-popup-close, .ak-video-popup-layer").on("click", function (e) {
-      $(".ak-video-popup").removeClass("active");
-      $("html").removeClass("overflow-hidden");
-      $(".ak-video-popup-container iframe").attr("src", "about:blank");
-      e.preventDefault();
-    });
-  }
-
-  /*--------------------------------------------------------------
-     6. Scroll Up
---------------------------------------------------------------*/
-  function scrollUp() {
-    $(".ak-scrollup").on("click", function (e) {
-      e.preventDefault();
-      $("html,body").animate(
-        {
-          scrollTop: 0,
-        },
-        0
-      );
-    });
-  }
-  // For Scroll Up
-  function showScrollUp() {
-    let scroll = $(window).scrollTop();
-    if (scroll >= 350) {
-      $(".ak-scrollup").addClass("ak-scrollup-show");
-    } else {
-      $(".ak-scrollup").removeClass("ak-scrollup-show");
-    }
-  }
-
-  /*--------------------------------------------------------------
-    7. Accordion
- --------------------------------------------------------------*/
-  if ($.exists(".ak-accordion-title")) {
-    $(".ak-accordion-title").click(function () {
-      $(this).toggleClass("active");
-      var $accordionTab = $(this).next(".ak-accordion-tab");
-      $accordionTab.slideToggle();
-      $accordionTab
-        .parent()
-        .siblings()
-        .find(".ak-accordion-tab")
-        .slideUp()
-        .prev()
-        .removeClass("active");
-    });
-  }
-
-  /*--------------------------------------------------------------
-    8. Sticky Content
- --------------------------------------------------------------*/
-
-  if ($.exists(".classespages-details-content.style1")) {
-    var top =
-      $("#sidebar").offset().top -
-      parseFloat($("#sidebar").css("marginTop").replace(/auto/, 0));
-    var footTop =
-      $("#footer").offset().top -
-      parseFloat($("#footer").css("marginTop").replace(/auto/, 0));
-
-    var maxY = footTop - $("#sidebar").outerHeight();
-
-    $(window).scroll(function (evt) {
-      var y = $(this).scrollTop();
-      if (y > top && $(this).innerWidth() > 991) {
-        if (y < maxY) {
-          $("#sidebar").addClass("fixed").removeAttr("style");
-        } else {
-          $("#sidebar")
-            .removeClass("fixed")
-            .css({
-              position: "absolute",
-              top: maxY - top + "px",
+            $(window).on("scroll", function () {
+                yOffset = $(window).scrollTop();
+                if (yOffset >= triggerPoint) {
+                    $(".sticky-header").addClass("sticky-fixed-top");
+                    $("body.open-sidebox").removeClass("open-sidebox");
+                } else {
+                    $(".sticky-header").removeClass("sticky-fixed-top");
+                }
             });
         }
-      } else {
-        $("#sidebar").removeClass("fixed");
-      }
-    });
-  }
 
-  /*--------------------------------------------------------------
-    9. Light Gallery
---------------------------------------------------------------*/
-  if ($.exists("#static-thumbnails")) {
-    const galleryDiv = document.getElementById("static-thumbnails");
-    lightGallery(galleryDiv, {
-      selector: ".item a",
-      addClass: "lg-custom-thumbnails",
-      animateThumb: true,
-      zoomFromOrigin: true,
-      allowMediaOverlap: true,
-      toggleThumb: true,
-    });
-  }
+        if ($(window).width() > 992) {
+            stickyHeader();
+        }
 
-  /*--------------------------------------------------------------
-    10. Auto Counter funfact
---------------------------------------------------------------*/
-  if ($.exists(".auto-counter-section")) {
-    var a = 0;
-    $(window).scroll(function () {
-      var oTop = $(".funfact-number").offset().top - window.innerHeight;
-      if (a == 0 && $(window).scrollTop() > oTop) {
-        $(".counter").each(function () {
-          var $this = $(this),
-            countTo = $this.attr("data-number");
-          $({
-            countNum: $this.text(),
-          }).animate(
-            {
-              countNum: countTo,
-            },
-
-            {
-              duration: 1500,
-              easing: "swing",
-              step: function () {
-                $this.text(Math.ceil(this.countNum).toLocaleString("en"));
-              },
-              complete: function () {
-                $this.text(Math.ceil(this.countNum).toLocaleString("en"));
-              },
+        // Mobile Menu
+        function mobileMenu() {
+            if ($(".header-menu-wrap").length) {
+                $(".nav-menu-inner .burger-menu").on("click", function () {
+                    $(this).toggleClass("menu-open");
+                    $(".header-menu-wrap").slideToggle(300);
+                });
             }
-          );
-        });
-        a = 1;
-      }
-    });
-  }
 
-  /*--------------------------------------------------------------
-    11.Feature Video scrollingImage
---------------------------------------------------------------*/
-  if ($.exists(".feature-video")) {
-    const $container = $(".feature-video");
-    if ($container.length > 0) {
-      $(window).on("scroll", function () {
-        const $image = $("#scrollingImage");
-        if ($image.length === 0) {
-          return;
-        }
-        var top = $(".feature-video").offset().top;
-        const scrollTop = $(this).scrollTop();
-        var imgTop = 0;
+            $(".header-menu-wrap ul li:has(ul)").each(function () {
+                $(this).append('<span class="dropdown-plus"></span>');
+                $(this).addClass("dropdown_menu");
+            });
 
-        if (scrollTop - top > "-950" && scrollTop - top < 0) {
-          imgTop = (scrollTop - top) / 2;
-          $image.css("top", `${imgTop}px`);
+            $(".header-menu-wrap .dropdown-plus").on("click", function () {
+                $(this).prev("ul").slideToggle(300);
+                $(this).toggleClass("dropdown-open");
+                $(".header-menu-wrap ul li:has(ul)").toggleClass("dropdown-open");
+            });
+
+            $(".header-menu-wrap .dropdown_menu a").append("<span></span>");
         }
 
-        if (scrollTop - top < "950" && scrollTop - top > 1) {
-          imgTop = (scrollTop - top) / 2;
+        mobileMenu();
+
+        // Responsive Classes
+        function responsiveClasses() {
+            var body = $("body");
+            if ($(window).width() < 992) {
+                body.removeClass("viewport-lg");
+                body.addClass("viewport-sm");
+            } else {
+                body.removeClass("viewport-sm");
+                body.addClass("viewport-lg");
+            }
         }
-        $image.css("top", `${imgTop}px`);
-      });
-    }
-  }
 
-  /*--------------------------------------------------------------
-    12. Feature Crad Animation
---------------------------------------------------------------*/
-  if ($.exists(".feature")) {
-    const nodes = [].slice.call(document.querySelectorAll(".feature-card"), 0);
-    const directions = { 0: "top", 1: "right", 2: "bottom", 3: "left" };
-    const classNames = ["in", "out"]
-      .map((p) => Object.values(directions).map((d) => `${p}-${d}`))
-      .reduce((a, b) => a.concat(b));
+        // Window Resize
+        $(window).on("resize", function () {
+            responsiveClasses();
+        }).resize();
 
-    const getDirectionKey = (ev, node) => {
-      const { width, height, top, left } = node.getBoundingClientRect();
-      const l = ev.pageX - (left + window.pageXOffset);
-      const t = ev.pageY - (top + window.pageYOffset);
-      const x = l - (width / 2) * (width > height ? height / width : 1);
-      const y = t - (height / 2) * (height > width ? width / height : 1);
-      return Math.round(Math.atan2(y, x) / 1.3 + 5) % 4;
-    };
+        // Popup Search Box
+        $(function () {
+            $("#popup-search-box").removeClass("toggled");
+            $("body").removeClass("open-search-box");
+            $(".dl-search-icon").on("click", function (e) {
+                e.stopPropagation();
+                $("body").toggleClass("open-search-box");
+                $("#popup-search").focus();
+            });
 
-    class Item {
-      constructor(element) {
-        this.element = element;
-        this.element.addEventListener("mouseover", (ev) =>
-          this.update(ev, "in")
-        );
-        this.element.addEventListener("mouseout", (ev) =>
-          this.update(ev, "out")
-        );
-      }
-
-      update(ev, prefix) {
-        this.element.classList.remove(...classNames);
-        this.element.classList.add(
-          `${prefix}-${directions[getDirectionKey(ev, this.element)]}`
-        );
-      }
-    }
-
-    nodes.forEach((node) => new Item(node));
-  }
-  if ($.exists(".feature-card-content")) {
-    const $featureCards = $(".feature-card.style-2");
-    const $firstCard = $featureCards.first();
-
-    $featureCards.on("mouseover", function () {
-      $featureCards.removeClass("active");
-      $(this).addClass("active");
-    });
-
-    $featureCards.on("mouseout", function () {
-      $(this).removeClass("active");
-      $firstCard.addClass("active");
-    });
-  }
-
-  /*--------------------------------------------------------------
-    13. Hover add/remove Active Class
---------------------------------------------------------------*/
-  if ($.exists(".add-active-class-content")) {
-    const packages = document.querySelectorAll(".hover-active-class");
-    packages.forEach(function (package) {
-      package.addEventListener("mouseenter", function () {
-        package.classList.add("active");
-      });
-      package.addEventListener("mouseleave", function () {
-        package.classList.remove("active");
-      });
-    });
-  }
-
-  /*--------------------------------------------------------------
-    14. Counter
---------------------------------------------------------------*/
-  if ($.exists(".package-content .style2")) {
-    const packageItems = document.querySelectorAll(".style2");
-    packageItems.forEach((item) => {
-      item.addEventListener("mouseenter", function () {
-        packageItems.forEach((item) => {
-          item.classList.remove("active");
+            $("#popup-search-box input").on("click", function (e) {
+                e.stopPropagation();
+            });
+            $(document).on(
+                "click",
+                ".search-close, #searchbox-overlay",
+                function (e) {
+                    e.preventDefault();
+                    $("body.open-search-box").removeClass("open-search-box");
+                }
+            );
         });
-        this.classList.add("active");
-      });
-      item.addEventListener("mouseleave", function () {
-        packageItems.forEach((item) => {
-          console.log(item.className);
-          item.classList.remove("active");
+
+        // Popup Sidebox
+        function sideBox() {
+            $("body").removeClass("open-sidebox");
+            $(document).on("click", ".dl-sidebox-icon", function (e) {
+                e.preventDefault();
+                $("body").toggleClass("open-sidebox");
+            });
+            $(document).on("click", "#sidebox-overlay", function (e) {
+                e.preventDefault();
+                $("body.open-sidebox").removeClass("open-sidebox");
+            });
+        }
+
+        sideBox();
+
+        function doAnimations(elements) {
+            var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            elements.each(function () {
+                var $this = $(this);
+                var $animationDelay = $this.data('delay');
+                var $animationDuration = $this.data('duration');
+                var $animationType = 'animated ' + $this.data('animation');
+                $this.css({
+                    'animation-delay': $animationDelay,
+                    '-webkit-animation-delay': $animationDelay,
+                    'animation-duration': $animationDuration
+                });
+                $this.addClass($animationType).one(animationEndEvents, function () {
+                    $this.removeClass($animationType);
+                });
+            });
+        }
+
+        // Main Slider
+        var mainSlider;
+        var sliderOptions = {
+            speed: 1000,
+            autoplay: false,
+            parallax: false,
+            mousewheel: false,
+            loop: true,
+            effect: 'fade',
+            a11y: false,
+            pagination: {
+                el: '.main-slider .slider-pagination',
+                clickable: true,
+                type: 'fraction', //fraction
+            },
+            navigation: {
+                nextEl: '.main-slider .slider-button-next',
+                prevEl: '.main-slider .slider-button-prev'
+            }
+        };
+
+        sliderOptions.on = {
+            slideChangeTransitionStart: function () {
+                var swiper = this;
+                var animatingElements = $(swiper.slides[swiper.activeIndex]).find('[data-animation]');
+                doAnimations(animatingElements);
+            },
+            resize: function () {
+                this.update();
+            }
+        };
+
+        mainSlider = new Swiper('.main-slider', sliderOptions);
+
+        // Main Slider 2
+        var mainSlider2;
+        var sliderOptions2 = {
+            speed: 1000,
+            autoplay: false,
+            parallax: false,
+            mousewheel: false,
+            loop: true,
+            effect: 'fade',
+            a11y: false,
+            pagination: false,
+            navigation: {
+                nextEl: '.main-slider-2 .swiper-next',
+                prevEl: '.main-slider-2 .swiper-prev'
+            }
+        };
+
+        sliderOptions2.on = {
+            slideChangeTransitionStart: function () {
+                var swiper = this;
+                var animatingElements = $(swiper.slides[swiper.activeIndex]).find('[data-animation]');
+                doAnimations(animatingElements);
+            },
+            resize: function () {
+                this.update();
+            }
+        };
+
+        mainSlider2 = new Swiper('.main-slider-2', sliderOptions2);
+
+        //Service Carousel  
+        var swiperService = new Swiper(".service-carousel", {
+            slidesPerView: "3",
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            autoplay: false,
+            speed: 400,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-outside .swiper-next",
+                prevEl: ".swiper-outside .swiper-prev",
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 25
+                },
+                // when window width is >= 767px
+                767: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 1,
+                    spaceBetween: 30
+                },
+                // when window width is >= 1024px
+                1024: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 1
+                }
+            }
         });
-        packageItems[1].classList.add("active");
-      });
+
+        //Testimonial Carousel  
+        var swiperTestimonial = new Swiper(".testimonial-carousel", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            autoplay: false,
+            speed: 400,
+            pagination: {
+                el: ".testi-pagination .swiper-pagination",
+                clickable: true,
+            },
+            navigation: false,
+        });
+
+        //Testimonial Carousel 2 
+        var swiperTestimonial2 = new Swiper(".testimonial-carousel-2", {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            autoplay: false,
+            speed: 400,
+            pagination: {
+                el: ".testi-pagination .swiper-pagination",
+                clickable: true,
+            },
+            navigation: false,
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 25
+                },
+                // when window width is >= 767px
+                767: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 30
+                },
+                // when window width is >= 1024px
+                1024: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 1
+                }
+            }
+        });
+
+        // Custom Cursor
+        var cursor = $(".dl-cursor"),
+            linksCursor = $("a, .swiper-nav, .cursor-effect, .swiper-pagination > span, button, .menu-right-item > div"),
+            crossCursor = $("#sidebox-overlay, #searchbox-overlay");
+
+        $(window).on("mousemove", function (e) {
+            cursor.css({
+                transform: "translate(" + (e.clientX - 15) + "px," + (e.clientY - 15) + "px)",
+                visibility: "inherit",
+            });
+        });
+
+        $(window).on("mouseout", function () {
+            cursor.css("visibility", "hidden");
+        });
+
+        linksCursor.each(function () {
+            $(this).on("mouseleave", function () {
+                cursor.removeClass("cursor-grow");
+            });
+            $(this).on("mouseover", function () {
+                cursor.addClass("cursor-grow");
+            });
+        });
+
+        crossCursor.each(function () {
+            $(this).on("mouseleave", function () {
+                cursor.removeClass("cross");
+            });
+            $(this).on("mouseover", function () {
+                cursor.addClass("cross");
+            });
+        });
+
+
+        //Related Taxi Carousel  
+        var swiperTaxi = new Swiper(".taxi-carousel", {
+            slidesPerView: "3",
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            autoplay: false,
+            speed: 400,
+            pagination: false,
+            navigation: {
+                nextEl: ".swiper-outside .swiper-next",
+                prevEl: ".swiper-outside .swiper-prev",
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 25
+                },
+                // when window width is >= 767px
+                767: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 1,
+                    spaceBetween: 30
+                },
+                // when window width is >= 1024px
+                1024: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 1
+                }
+            }
+        });
+
+        // Venobox Active
+        new VenoBox({
+            selector: '.dl-video-popup, .dl-img-popup',
+            bgcolor: 'transparent',
+            numeration: true,
+            infinigall: true,
+            spinner: 'plane',
+        });
+
+
+        // Date Time Picker
+        $('.date-picker').datetimepicker({
+            timepicker: false,
+            format:'d/m/Y'
+        });
+
+        $('.time-picker').datetimepicker({
+            datepicker: false,
+            format: 'H:i',
+            step: 5
+        });
+
+        // Nice Select
+        $('select').niceSelect();
+
+        // Current Year
+        var currentYear = new Date().getFullYear();
+        $('#currentYear').append(currentYear);
+
+
+        // Scroll To Top
+        var scrollTop = $("#scroll-top");
+        $(window).on("scroll", function () {
+            var topPos = $(this).scrollTop();
+            if (topPos > 100) {
+                $("#scrollup").removeClass("hide");
+                $("#scrollup").addClass("show");
+            } else {
+                $("#scrollup").removeClass("show");
+                $("#scrollup").addClass("hide");
+            }
+        });
+
+        $(scrollTop).on("click", function () {
+            $("html, body").animate({
+                    scrollTop: 0,
+                },
+                200
+            );
+            return false;
+        });
+
+        // MailChimp
+        if ($('.subscribe-form').length>0) {
+            $('.subscribe-form').ajaxChimp({
+                language: 'en',
+                callback: mailchimpCallback,
+                url: "https://gmail.us4.list-manage.com/subscribe/post?u=540c52965f5180ae846e5e5a8&amp;id=4dbe9a9245&amp;f_id=0027a5ebf0"
+            });
+        }
+        
+        // Wow JS Active
+        new WOW().init();
+
+        $(scrollTop).on("click", function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+
+        function mailchimpCallback(resp) {
+            if (resp.result === 'success') {
+                $('#subscribe-result').addClass('subs-result');
+                $('.subscription-success').text(resp.msg).fadeIn();
+                $('.subscription-error').fadeOut();
+                setTimeout(function(){
+                    $('#subscribe-result').removeClass('subs-result');
+                    $('.subscription-success').fadeOut();
+                }, 5000);
+            } else if(resp.result === 'error') {
+                $('#subscribe-result').addClass('subs-result');
+                $('.subscription-error').text(resp.msg).fadeIn();
+            }
+        }
+        $.ajaxChimp.translations.en = {
+            'submit': 'Submitting...',
+            0: 'We have sent you a confirmation email',
+            1: 'Please enter your email',
+            2: 'An email address must contain a single @',
+            3: 'The domain portion of the email address is invalid (the portion after the @: )',
+            4: 'The username portion of the email address is invalid (the portion before the @: )',
+            5: 'This email address looks fake or invalid. Please enter a real email address'
+        };
+
     });
-  }
-  //end the scripts
 })(jQuery);
