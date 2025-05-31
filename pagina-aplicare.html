@@ -3,7 +3,7 @@
 <html class="no-js" lang="en">
 <!--<![endif]-->
 <head>
-<title>Explorează România – Excursii Unice cu Ghid și Confort | NTS TOUR</title><meta content="Alege din cele mai frumoase excursii în România: Delta Dunării, Colibița, Maramureș, Bucovina, munte și mare. Transport, cazare și ghid incluse. NTS TOUR!" name="description"/><meta content="Explorează România – Delta, Maramureș, Munți | NTS TOUR" property="og:title"/><meta content="Excursii autentice în România: cazare, transport, mese și ghid. Redescoperă țara într-un mod confortabil și bine organizat!" property="og:description"/><meta content="https://ntstour.ro/assets/img/evenimente/prislop.png" property="og:image"/><meta content="https://ntstour.ro/exploreazaromania.html" property="og:url"/><meta content="index, follow" name="robots"/><meta charset="utf-8"/>
+<title>Hai în Echipa NTS TOUR – Aplică Online ca Șofer sau Partener Companie</title><meta content="Vrei să colaborezi cu NTS TOUR? Aplică acum online ca șofer profesionist sau partener companie. Trimite CV-ul sau detaliile firmei și alătură-te unei echipe dinamice." name="description"/><meta content="Aplică la NTS TOUR – Colaborare Șoferi &amp; Companii" property="og:title"/><meta content="Completează formularul pentru a deveni colaborator NTS TOUR. Oportunități pentru șoferi și companii din domeniul transportului." property="og:description"/><meta content="https://ntstour.ro/assets/img/logo-dark.webp" property="og:image"/><meta content="https://ntstour.ro/pagina-aplicare.html" property="og:url"/><meta content="index, follow" name="robots"/><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 
 <meta content="MediaExpertSolution" name="Stroe Marius"/>
@@ -230,232 +230,146 @@
 </ul>
 </div>
 </div>
-<!--/.popup-sidebox-->
-<div id="sidebox-overlay"></div>
-<section class="page-header">
-<div class="page-header-shape"></div>
+<style>
+    body {
+      background: #fff;
+      color: #212529;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .form-section {
+      background: #00bcd4;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 50px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    }
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px;
+      border: 1px solid #212529;
+      border-radius: 8px;
+      background: #fff;
+      color: #fff;
+    }
+    form button {
+      background: linear-gradient(90deg, #0dcaf0, #00bcd4);
+      color: #f4f8fa;
+      font-weight: bold;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 30px;
+      transition: transform 0.2s ease;
+    }
+    form button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+
+<body>
+<div class="container py-5">
+<div class="section-title text-center" style="margin-bottom: 40px;">
+<h1 style="color: #ffd700; font-weight: bold;">Aplică pentru colaborare</h1>
+<p style="color: #ccc;">Selectează categoria care ți se potrivește și completează formularul corespunzător.</p>
+</div>
+<div class="category-buttons text-center mb-5">
+<button class="btn btn-warning m-2" onclick="showForm('soferi')">🚍 Sunt șofer</button>
+<button class="btn btn-warning m-2" onclick="showForm('companii')">🏭 Reprezint o companie</button>
+</div>
+<div class="form-section" id="form-soferi-section" style="display: none;">
+<h3>🚍 Șoferi Profesioniști</h3>
+<form enctype="multipart/form-data" id="form-soferi" onsubmit="return validateSoferiForm()">
+<input name="nume" placeholder="Nume complet" required="" type="text"/>
+<select name="categorie_permis" required="">
+<option value="">Selectează categoria permisului</option>
+<option value="B">B</option>
+<option value="C">C</option>
+<option value="CE">CE</option>
+<option value="D">D</option>
+<option value="DE">DE</option>
+</select>
+<input name="telefon" placeholder="Telefon" required="" type="tel"/>
+<input name="email" placeholder="Email" required="" type="email"/>
+<textarea name="experienta" placeholder="Experiență relevantă, disponibilitate, tipuri de transport (turistic, marfă, muncitori)" rows="4"></textarea>
+<label>Încarcă CV (PDF/DOC)</label>
+<input accept=".pdf,.doc,.docx" id="cvFile" name="cv" required="" type="file"/>
+<div class="form-check mb-3">
+<input class="form-check-input" id="gdpr1" required="" type="checkbox"/>
+<label class="form-check-label" for="gdpr1">Sunt de acord cu politica de confidențialitate</label>
+</div>
+<button type="submit">Trimite aplicația</button>
+<p id="cvMessage" style="color: #ffd700; margin-top: 10px;"></p>
+</form>
+</div>
+<div class="form-section" id="form-companii-section" style="display: none;">
+<h3>🏭 Companii &amp; Logistică</h3>
+<form enctype="multipart/form-data" id="form-companii" onsubmit="return validateCompaniiForm()">
+<input name="firma" placeholder="Nume companie" required="" type="text"/>
+<input name="persoana_contact" placeholder="Persoană de contact" required="" type="text"/>
+<input name="telefon" placeholder="Telefon" required="" type="tel"/>
+<input name="email" placeholder="Email companie" required="" type="email"/>
+<textarea name="detalii" placeholder="Tip servicii dorite (transport muncitori, marfă), frecvență, rute, tip vehicule" rows="4"></textarea>
+<label>Încarcă document fiscal (ex: Certificat înregistrare, CAEN)</label>
+<input accept=".pdf,.jpg,.jpeg,.png" id="docFirma" name="document_firma" type="file"/>
+<div class="form-check mb-3">
+<input class="form-check-input" id="gdpr2" required="" type="checkbox"/>
+<label class="form-check-label" for="gdpr2">Sunt de acord cu politica de confidențialitate</label>
+</div>
+<button type="submit">Trimite cererea</button>
+<p id="firmaMessage" style="color: #ffd700; margin-top: 10px;"></p>
+</form>
+</div>
+</div>
+<script>
+function showForm(formType) {
+  document.getElementById("form-soferi-section").style.display = formType === "soferi" ? "block" : "none";
+  document.getElementById("form-companii-section").style.display = formType === "companii" ? "block" : "none";
+  window.scrollTo({ top: document.getElementById("form-" + formType + "-section").offsetTop - 100, behavior: 'smooth' });
+}
+
+function validateSoferiForm() {
+  const file = document.getElementById('cvFile').files[0];
+  const message = document.getElementById('cvMessage');
+  if (file && file.size > 5 * 1024 * 1024) {
+    message.textContent = 'Fișierul este prea mare. Maxim 5MB.';
+    return false;
+  }
+  message.textContent = '✅ Aplicația a fost trimisă cu succes!';
+  setTimeout(() => window.location.href = 'aplicatie-trimisa.html', 1500);
+  return false;
+}
+
+function validateCompaniiForm() {
+  const file = document.getElementById('docFirma').files[0];
+  const message = document.getElementById('firmaMessage');
+  if (file && file.size > 5 * 1024 * 1024) {
+    message.textContent = 'Fișierul este prea mare. Maxim 5MB.';
+    return false;
+  }
+  message.textContent = '✅ Cererea a fost trimisă cu succes!';
+  setTimeout(() => window.location.href = 'aplicatie-trimisa.html', 1500);
+  return false;
+}
+</script>
+<!--/.testimonial-section-->
+<section class="cta-section padding">
+<div class="cta-men wow fade-in-bottom" data-wow-delay="200ms"></div>
 <div class="container">
-<div class="page-header-info">
-<h4>Detalii servicii</h4>
-<h2>Transformăm fiecare drum într-o experiență. <br/> Alege  <span>NTS TOUR!</span></h2>
-<p>Tu decizi destinația, noi livrăm confortul. </p>
+<div class="cta-content">
+<h2>Sună acum  <span>rezervă-ți locul în siguranță!</span> <br/> NTS TOUR transport complet pentru oameni, echipe și companii.</h2>
+<p>De la curse turistice la parteneriate corporate, gestionăm eficient orice traseu – intern sau internațional.<br/>Oferim servicii flexibile, rezervări rapide, trasee actualizate și suport profesionist. 
+    Totul, într-o singură aplicație.</p>
+<div class="cta-call">
+<i class="las la-phone-volume"></i>
+<p><span>Rezervă telefonic o cursă</span><a href="tel:+40 724 471 395">+40 724 471 395</a></p>
+</div>
 </div>
 </div>
 </section>
-<!--/.page-header-->
-<!--/.ÎNCEPUT TABEL EVENIMENTE-->
-<div class="container">
-<div class="row">
-<!-- Sidebar complet în stânga -->
-<div class="col-lg-4 sm-padding">
-<div class="service-sidebar sidebar-widget">
-<div class="widget-title service-widget">
-<h3>Evenimente</h3>
-</div>
-<ul>
-<li><a href="#">Excursie 1 zi</a><i class="las la-arrow-right"></i></li>
-<li><a href="#">Explorează România</a><i class="las la-arrow-right"></i></li>
-<li><a href="#">Explorează lumea</a><i class="las la-arrow-right"></i></li>
-<li><a href="#">Convenții</a><i class="las la-arrow-right"></i></li>
-<li><a href="#">Transport Evenimente</a><i class="las la-arrow-right"></i></li>
-<li><a href="#">Transport Marfă</a><i class="las la-arrow-right"></i></li>
-<li><a href="#">Dăruiește o călătorie</a><i class="las la-arrow-right"></i></li>
-</ul>
-</div>
-<div class="sidebar-widget banner">
-<div class="banner-info">
-<a href="index.html"><img alt="logo" class="logo" src="assets/img/logo-light.webp"/></a>
-<h3>Pornește-ți călătoria alături de<span> NTS TOUR!</span></h3>
-<p>Tot ce ai nevoie pentru un transport sigur, rapid și eficient – într-un singur loc.</p>
-<h2 class="discount"><span>-15%</span> reducere la rezervări online!</h2>
-<a class="default-btn" href="contact.html">Prinde oferta!</a>
-</div>
-</div>
-<div class="sidebar-widget">
-<div class="widget-title">
-<h3>Tags</h3>
-</div>
-<ul class="tags">
-<li><a href="#">#transport</a></li>
-<li><a href="#">#turism</a></li>
-<li><a href="#">#transportpersoane</a></li>
-<li><a href="#">#excursii</a></li>
-<li><a href="#">#autocare</a></li>
-<li><a href="#">#microbuze</a></li>
-<li><a href="#">#turismromania</a></li>
-<li><a href="#">#transportextern</a></li>
-</ul>
-</div>
-</div>
-<!-- Tabel excursii + sortare  -->
-<div class="col-lg-8">
-<div class="text-end mb-4">
-<div aria-label="Sortare Evenimente" class="btn-group" role="group">
-<button class="btn btn-sortare" onclick="sortEvents('luna')">↓ Lună</button>
-<button class="btn btn-sortare" onclick="sortEvents('pret')">↓ Preț</button>
-<button class="btn btn-sortare" onclick="sortEvents('intern')">↓ Interne</button>
-<button class="btn btn-sortare" onclick="sortEvents('extern')">↓ Externe</button>
-</div>
-</div>
-<!-- Tabel excursii + sortare  -->
-<!DOCTYPE AICI PUI EXCURSII INCEPUT html>
-
-<div class="row" id="eventList">
-<div class="col-md-6 mb-4">
-<div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/prislop.jpg"/>
-<div class="card-body">
-<h5 class="card-title">23 – 25 Mai 2025</h5>
-<p class="card-text"><strong> DELTA DUNĂRII – SULINA</strong> Include: transport, ambarcațiuni, cazare, 2 mese, ghid etc. <br/><span style="color: green; font-weight: bold;">1070 RON/pers</span></p>
-<a class="btn btn-success btn-sm" href="https://buy.stripe.com/YOUR_LINK_HERE">Plătește</a>
-<a class="btn btn-primary btn-sm" href="sulina2325.html">Detalii</a>
-</div>
-</div>
-</div>
-<div class="col-md-6 mb-4">
-<div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/prislop.jpg"/>
-<div class="card-body">
-<h5 class="card-title">06 – 09 Iunie</h5>
-<p class="card-text"><strong> RUSALII LA MARE – SATURN</strong> Include: transport, cazare, all inclusive<br/><span style="color: green; font-weight: bold;">950 RON/pers</span></p>
-<a class="btn btn-success btn-sm" href="https://buy.stripe.com/YOUR_LINK_HERE">Plătește</a>
-<a class="btn btn-primary btn-sm" href="rusaliilamare.html">Detalii</a>
-</div>
-</div>
-</div>
-<div class="col-md-6 mb-4">
-<div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/prislop.jpg"/>
-<div class="card-body">
-<h5 class="card-title">14 – 15 Iunie </h5>
-<p class="card-text"><strong>MAGIA DIN ȚINUTUL HARGHITEI</strong> Include: transport, cazare, mic dejun/cină, acces piscină, tur ghidat<br/><span style="color: green; font-weight: bold;">460 RON/pers</span></p>
-<a class="btn btn-success btn-sm" href="https://buy.stripe.com/YOUR_LINK_HERE">Plătește</a>
-<a class="btn btn-primary btn-sm" href="tinutulharghitei.html">Detalii</a>
-</div>
-</div>
-</div>
-<div class="col-md-6 mb-4">
-<div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/prislop.jpg"/>
-<div class="card-body">
-<h5 class="card-title">14 – 17 August</h5>
-<p class="card-text"><strong>MOLDOVA &amp; BUCOVINA</strong> Include: 3 nopți cazare, mic dejun/cină, petrecere, ghid, transport<br/><span style="color: green; font-weight: bold;">1000 RON/pers</span></p>
-<a class="btn btn-success btn-sm" href="https://buy.stripe.com/YOUR_LINK_HERE">Plătește</a>
-<a class="btn btn-primary btn-sm" href="moldovabucovina.html">Detalii</a>
-</div>
-</div>
-</div>
-<div class="col-md-6 mb-4">
-<div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/prislop.jpg"/>
-<div class="card-body">
-<h5 class="card-title">15 – 18 August </h5>
-<p class="card-text"><strong>MARAMUREȘ &amp; FESTIVALUL DACILOR LIBERI</strong> Include: 3 nopți cazare, mic dejun/cină, muzică live, ghid, transpor<br/><span style="color: green; font-weight: bold;">990 RON/pers</span></p>
-<a class="btn btn-success btn-sm" href="https://buy.stripe.com/YOUR_LINK_HERE">Plătește</a>
-<a class="btn btn-primary btn-sm" href="festivaluldacilor.html">Detalii</a>
-</div>
-</div>
-</div>
-<div class="col-md-6 mb-4">
-<div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/prislop.jpg"/>
-<div class="card-body">
-<h5 class="card-title">17 – 20 August </h5>
-<p class="card-text"><strong>SEJUR COLIBIȚA – MAREA DE LA MUNTE</strong> Include: transport, 3 nopți cazare Fisherman’s Resort, mic dejun/cină bufet, băuturi tradiționale<br/><span style="color: green; font-weight: bold;">1090 RON/pers</span></p>
-<a class="btn btn-success btn-sm" href="https://buy.stripe.com/YOUR_LINK_HERE">Plătește</a>
-<a class="btn btn-primary btn-sm" href="sejurcolibita.html">Detalii</a>
-</div>
-</div>
-</div>
-<div class="col-md-6 mb-4">
-<div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/prislop.jpg"/>
-<div class="card-body">
-<h5 class="card-title">04 – 07 Septembrie </h5>
-<p class="card-text"><strong>SEJUR MAREA NEAGRĂ – SATURN</strong>Include: transport, 3 nopți cazare, mic dejun, ghid<br/><span style="color: green; font-weight: bold;">660 RON/pers</span></p>
-<a class="btn btn-success btn-sm" href="https://buy.stripe.com/YOUR_LINK_HERE">Plătește</a>
-<a class="btn btn-primary btn-sm" href="sejurmareaneagra.html">Detalii</a>
-</div>
-</div>
-</div>
-<div class="col-md-6 mb-4">
-<div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/prislop.jpg"/>
-<div class="card-body">
-<h5 class="card-title">(16 – 21 Noiembrie </h5>
-<p class="card-text"><strong> SEJUR BĂILE FELIX</strong>  Include: transport, 5 nopți cazare, mic dejun/cină, tur Oradea<br/><span style="color: green; font-weight: bold;">1550 RON/pers</span></p>
-<a class="btn btn-success btn-sm" href="https://buy.stripe.com/YOUR_LINK_HERE">Plătește</a>
-<a class="btn btn-primary btn-sm" href="sejurbailefelix.html">Detalii</a>
-</div>
-</div>
-</div>
-<!-- Tabel excursii + sortare sfarsit -->
-<!DOCTYPE AICI PUI EXCURSII sfarsit html>
-
-</div>
-</div>
-</div>
-</div>
-
-
-
-<style>
-.btn-sortare {
-  background-color: #00aaff;
-  color: #fff;
-  padding: 10px 18px;
-  margin: 2px;
-  border-radius: 30px;
-  font-weight: 600;
-  border: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-.btn-sortare:hover {
-  background-color: #00bbff;
-  transform: scale(1.05);
-}
-</style>
-<script>
-function sortEvents(type) {
-  const container = document.getElementById('eventList');
-  const cards = Array.from(container.children);
-
-  const extractPrice = text => {
-    const match = text.match(/(\d+[\.,]?\d*)\s*(RON|EURO)/);
-    return match ? parseFloat(match[1].replace(',', '.')) : Infinity;
-  };
-
-  const extractMonth = el => {
-    const title = el.querySelector('.card-title');
-    return title ? title.textContent.trim() : '';
-  };
-
-  const extractLocation = el => {
-    const text = el.textContent.toLowerCase();
-    if (text.includes('istanbul') || text.includes('bulgaria') || text.includes('greece') || text.includes('grecia')) return 'extern';
-    return 'intern';
-  };
-
-  cards.sort((a, b) => {
-    if (type === 'pret') {
-      return extractPrice(a.textContent) - extractPrice(b.textContent);
-    } else if (type === 'luna') {
-      return extractMonth(a).localeCompare(extractMonth(b));
-    } else if (type === 'intern' || type === 'extern') {
-      const valA = extractLocation(a);
-      const valB = extractLocation(b);
-      return (valA === type ? -1 : 1);
-    }
-    return 0;
-  });
-
-  container.innerHTML = '';
-  cards.forEach(card => container.appendChild(card));
-}
-</script>
-<!--/.SFÂRȘIT TABEL EVENIMENTE-->
-<!--/.TABEL SFARSITt-->
-<!--/.service-details-->
+<!--/.cta-section-->
+<!--/.blog-section-->
 <footer class="footer-section">
 <div class="footer-top-wrap bg-grey">
 <div class="container">
@@ -463,7 +377,7 @@ function sortEvents(type) {
 <div class="row align-items-end">
 <div class="col-lg-8">
 <div class="brand">
-<a class="footer-logo" href="index.html"><img alt="logo" src="assets/img/logo-light.webp"/></a>
+<a class="footer-logo" href="index.html"><img alt="logo" src="assets/img/logo-light.png"/></a>
 <p>Indiferent că vorbim despre turism, transport muncitori sau logistică, ne ocupăm de tot – 
     rapid, sigur și bine organizat. Garanția noastră? Servicii eficiente și adaptate vremurilor.</p>
 </div>
@@ -525,15 +439,15 @@ function sortEvents(type) {
 <h3>Primește cele mai bune oferte direct în inbox</h3>
 </div>
 <form action="#" class="subscribe-form">
-<input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
-<input name="action" type="hidden" value="mailchimpsubscribe"/>
+<input class="form-control" name="email" placeholder="Your Email" required="" type="email">
+<input name="action" type="hidden" value="mailchimpsubscribe">
 <button class="submit">Trimite-mi ofertele</button>
 <div class="clearfix"></div>
 <div id="subscribe-result">
 <div class="subscription-success"></div>
 <div class="subscription-error"></div>
 </div>
-</form>
+</input></input></form>
 </div>
 </div>
 </div>
@@ -548,22 +462,22 @@ function sortEvents(type) {
 <div class="copyright-wrap">
 <div class="container d-flex justify-content-between align-items-start flex-wrap text-center py-4" style="column-gap: 80px; row-gap: 30px;">
 <div class="d-flex flex-column align-items-center">
-<img alt="Date firmă" src="assets/img/datefirma.webp" style="height: 28px;">
+<img alt="Date firmă" src="assets/img/datefirma.webp" style="height: 28px;"/>
 <a class="footer-white-link" href="https://www.listafirme.ro/serban-nts-tour-srl-44975988/">Date firmă</a>
-</img></div>
+</div>
 <div class="d-flex flex-column align-items-center">
-<img alt="ANPC" src="assets/img/anpc.webp" style="height: 28px;">
+<img alt="ANPC" src="assets/img/anpc.webp" style="height: 28px;"/>
 <a class="footer-white-link" href="https://eservicii.anpc.ro/" target="_blank">ANPC</a>
-</img></div>
+</div>
 <div class="d-flex flex-column align-items-center">
-<img alt="Media Expert Solution" src="assets/img/mediaexpertsolution.webp" style="height: 28px;">
+<img alt="Media Expert Solution" src="assets/img/mediaexpertsolution.webp" style="height: 28px;"/>
 <a class="footer-white-link" href="https://mediaexpertsolution.com">Media Expert Solution</a>
-</img></div>
+</div>
 <div class="d-flex flex-column align-items-center">
 <div class="d-flex gap-2 justify-content-center">
-<img alt="Mastercard" src="assets/img/mastercard.webp" style="height: 28px;">
-<img alt="Visa" src="assets/img/visa.webp" style="height: 28px;">
-</img></img></div>
+<img alt="Mastercard" src="assets/img/mastercard.webp" style="height: 28px;"/>
+<img alt="Visa" src="assets/img/visa.webp" style="height: 28px;"/>
+</div>
 <span class="footer-white-link">Modalități de plată</span>
 </div>
 </div>
@@ -615,4 +529,4 @@ function sortEvents(type) {
 <script src="assets/js/book-ride.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
-</html>
+</body></html>
