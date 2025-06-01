@@ -61,7 +61,32 @@
   overflow: hidden;
   height: 0;
 }
-</style></head>
+</style>
+<style>
+.galerie-poze {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.galerie-poze a img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.galerie-poze a:hover img {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .galerie-poze {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+</head>
 <body>
 <!--[if lt IE 8]>
 	MediaExpertSolution
@@ -259,17 +284,17 @@
 </section>
 <section class="excursie-unica">
 <div class="galerie-poze">
-<a class="venobox" data-gall="galerie-prislop" data-title="Imagine 1 - Prislop" href="assets/img/evenimente/prislop.png">
-<img alt="Prislop 1" src="assets/img/evenimente/prislop.png"/>
+<a class="venobox" data-gall="galerie-grecia" data-title="Imagine 1 - Grecia" href="assets/img/evenimente/katerini3.webp">
+<img alt="Grecia 1" src="assets/img/evenimente/katerini3.webp"/>
 </a>
-<a class="venobox" data-gall="galerie-prislop" data-title="Imagine 2 - Prislop" href="assets/img/evenimente/prislop.png">
-<img alt="Prislop 2" src="assets/img/evenimente/prislop.png"/>
+<a class="venobox" data-gall="galerie-grecia" data-title="Imagine 2 - Grecia" href="assets/img/evenimente/katerini4.webp">
+<img alt="Grecia 2" src="assets/img/evenimente/katerini4.webp"/>
 </a>
-<a class="venobox" data-gall="galerie-prislop" data-title="Imagine 3 - Prislop" href="assets/img/evenimente/prislop.png">
-<img alt="Prislop 3" src="assets/img/evenimente/prislop.png"/>
+<a class="venobox" data-gall="galerie-grecia" data-title="Imagine 3 - Grecia" href="assets/img/evenimente/katerini1.webp">
+<img alt="Grecia 3" src="assets/img/evenimente/katerini1.webp"/>
 </a>
-<a class="venobox" data-gall="galerie-prislop" data-title="Imagine 4 - Prislop" href="assets/img/evenimente/prislop.png">
-<img alt="Prislop 4" src="assets/img/evenimente/prislop.png"/>
+<a class="venobox" data-gall="galerie-grecia" data-title="Imagine 4 - Grecia" href="assets/img/evenimente/katerini6.webp">
+<img alt="Grecia 4" src="assets/img/evenimente/katerini6.webp"/>
 </a>
 </div>
 <div class="excursie-detalii">

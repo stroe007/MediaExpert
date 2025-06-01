@@ -61,7 +61,32 @@
   overflow: hidden;
   height: 0;
 }
-</style></head>
+</style>
+<style>
+.galerie-poze {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.galerie-poze a img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.galerie-poze a:hover img {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .galerie-poze {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+</head>
 <body>
 <!--[if lt IE 8]>
 	MediaExpertSolution
