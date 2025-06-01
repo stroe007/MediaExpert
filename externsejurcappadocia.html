@@ -60,6 +60,25 @@
   height: 0;
 }
 </style>
+
+<style>
+    .galerie-static img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    @media (min-width: 769px) {
+        .galerie-static img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+        }
+    }
+    </style>
 <style>
 .galerie-poze {
   display: grid;
@@ -67,15 +86,21 @@
   gap: 20px;
   padding: 20px;
 }
-.galerie-poze a img {
+.galerie-poze .galerie-static,
+.galerie-poze .galerie-static img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.galerie-poze a:hover img {
-  transform: scale(1.05);
+@media (min-width: 769px) {
+  .galerie-poze .galerie-static img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
 }
 @media (max-width: 768px) {
   .galerie-poze {
@@ -83,20 +108,6 @@
   }
 }
 </style>
-<style>
-  .gallery img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  @media (hover: hover) {
-    .gallery img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
-      cursor: default;
-    }
-  }
-</style>
-
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -127,7 +138,7 @@
 <li><a href="intrebari.html">Întrebări frecvente</a></li>
 </ul>
 <ul class="header-social-share">
-<li><a href="https://www.facebook.com/ScSapunariServSRL"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://www.facebook.com/ScSapunariServSRL" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
 </ul>
 </div>
@@ -138,7 +149,7 @@
 <div class="container-fluid px-0"><div class="contact-header-row d-none d-lg-flex justify-content-between align-items-start w-100" style="margin-top: 0px; padding: 4px 30px 0 30px;">
 <!-- LOGO -->
 <div class="site-logo" style="flex-shrink: 0;">
-<img alt="Logo" src="assets/img/logo-dark.webp" style="max-height: 70px;"/>
+<a href="index.html"><img alt="Logo" src="assets/img/logo-dark.webp" style="max-height: 70px;"/></a>
 </div>
 <!-- INFO SECTION DREAPTA -->
 <div class="contact-info-bar d-flex align-items-start" style="font-size: 12.5px; font-weight: 500; gap: 80px;">
@@ -183,7 +194,7 @@
 <div class="container-fluid px-0">
 <div class="nav-menu-inner">
 <div class="site-logo">
-<img alt="Logo" src="assets/img/logo-dark.webp"/>
+<a href="index.html"><img alt="Logo" src="assets/img/logo-dark.webp"/></a>
 </div><!--/.site-logo-->
 <div class="header-menu-wrap">
 <ul class="nav-menu"><li><a href="index.html" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">Acasă</a></li><li class="dropdown_menu">
@@ -255,7 +266,7 @@
 <div class="popup-sidebox" id="popup-sidebox">
 <div class="sidebox-content">
 <div class="site-logo">
-<img alt="logo" src="assets/img/logo-light.webp"/>
+<a href="index.html"><img alt="logo" src="assets/img/logo-light.webp"/></a>
 </div>
 <p>Oferim experiență, siguranță și profesionalism, indiferent de destinație sau încărcătură!</p>
 <ul class="sidebox-list">
@@ -295,10 +306,10 @@
 </section>
 <section class="excursie-unica">
 <div class="galerie-poze">
-<img alt="CAPPADOCIA  3" src="assets/img/evenimente/capadocia2.webp"/>
-<img alt="CAPPADOCIA  3" src="assets/img/evenimente/capadocia4.webp"/>
-<img alt="CAPPADOCIA  3" src="assets/img/evenimente/capadocia4.webp"/>
-<img alt="CAPPADOCIA  4" src="assets/img/evenimente/capadocia5.webp"/>
+<a class="galerie-static" style="pointer-events: none;"><img alt="CAPPADOCIA  3" src="assets/img/evenimente/capadocia2.webp"/></a>
+<a class="galerie-static" style="pointer-events: none;"><img alt="CAPPADOCIA  3" src="assets/img/evenimente/capadocia4.webp"/></a>
+<a class="galerie-static" style="pointer-events: none;"><img alt="CAPPADOCIA  3" src="assets/img/evenimente/capadocia4.webp"/></a>
+<a class="galerie-static" style="pointer-events: none;"><img alt="CAPPADOCIA  4" src="assets/img/evenimente/capadocia5.webp"/></a>
 </div>
 <div class="excursie-detalii">
 <h3>Detalii excursie:</h3>
@@ -348,7 +359,7 @@ bilet tereferic, zborurile cu balonul. Intrările la obiectivele turistice, Ghiz
 <div class="row align-items-end">
 <div class="col-lg-8">
 <div class="brand">
-<img alt="logo" src="assets/img/logo-light.webp"/>
+<a class="footer-logo" href="index.html"><img alt="logo" src="assets/img/logo-light.webp"/></a>
 <p>Indiferent că vorbim despre turism, transport muncitori sau logistică, ne ocupăm de tot – 
     rapid, sigur și bine organizat. Garanția noastră? Servicii eficiente și adaptate vremurilor.</p>
 </div>
@@ -434,15 +445,15 @@ bilet tereferic, zborurile cu balonul. Intrările la obiectivele turistice, Ghiz
 <div class="container d-flex justify-content-between align-items-start flex-wrap text-center py-4" style="column-gap: 80px; row-gap: 30px;">
 <div class="d-flex flex-column align-items-center">
 <img alt="Date firmă" src="assets/img/datefirma.webp" style="height: 28px;"/>
-<a class="footer-white-link" href="https://www.listafirme.ro/serban-nts-tour-srl-44975988/">Date firmă</a>
+<a class="footer-white-link" href="https://www.listafirme.ro/serban-nts-tour-srl-44975988/" rel="noopener">Date firmă</a>
 </div>
 <div class="d-flex flex-column align-items-center">
 <img alt="ANPC" src="assets/img/anpc.webp" style="height: 28px;"/>
-<a class="footer-white-link" href="https://eservicii.anpc.ro/" target="_blank">ANPC</a>
+<a class="footer-white-link" href="https://eservicii.anpc.ro/" rel="noopener" target="_blank">ANPC</a>
 </div>
 <div class="d-flex flex-column align-items-center">
 <img alt="Media Expert Solution" src="assets/img/mediaexpertsolution.webp" style="height: 28px;"/>
-<a class="footer-white-link" href="https://mediaexpertsolution.com">Media Expert Solution</a>
+<a class="footer-white-link" href="https://mediaexpertsolution.com" rel="noopener">Media Expert Solution</a>
 </div>
 <div class="d-flex flex-column align-items-center">
 <div class="d-flex gap-2 justify-content-center">
