@@ -2,7 +2,7 @@
 
 <html class="no-js" lang="en">
 <!--<![endif]-->
-<head><link as_="image" href="assets/img/slider-bg2.webp" rel="preload" type="image/webp"/>
+<head>
 <title>
    Explorează România – Excursii Unice cu Ghid și Confort | NTS TOUR
   </title>
@@ -17,20 +17,20 @@
 <meta content="MediaExpertSolution" name="Stroe Marius"/>
 <link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
 <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="assets/css/animate.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/fontawesome.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/line-awesome.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/keyframe-animation.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/jquery.datetimepicker.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/nice-select.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/venobox.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/swiper.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/elements.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/header.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/slider.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/blog.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/animate.min.css" rel="stylesheet"/>
+<link href="assets/css/fontawesome.min.css" rel="stylesheet"/>
+<link href="assets/css/line-awesome.min.css" rel="stylesheet"/>
+<link href="assets/css/keyframe-animation.css" rel="stylesheet"/>
+<link href="assets/css/jquery.datetimepicker.min.css" rel="stylesheet"/>
+<link href="assets/css/nice-select.css" rel="stylesheet"/>
+<link href="assets/css/venobox.min.css" rel="stylesheet"/>
+<link href="assets/css/swiper.min.css" rel="stylesheet"/>
+<link href="assets/css/elements.css" rel="stylesheet"/>
+<link href="assets/css/header.css" rel="stylesheet"/>
+<link href="assets/css/slider.css" rel="stylesheet"/>
+<link href="assets/css/blog.css" rel="stylesheet"/>
 <link href="assets/css/main.css" rel="stylesheet"/>
-<link href="assets/css/responsive.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/responsive.css" rel="stylesheet"/>
 <style>
    @keyframes redglow {
   from {
@@ -72,6 +72,20 @@
   height: 0;
 }
   </style>
+<style>
+  .gallery img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  @media (hover: hover) {
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+      cursor: default;
+    }
+  }
+</style>
+
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -79,7 +93,7 @@
 	</p><![endif]-->
 <div class="site-preloader">
 <div class="autocar-wrapper">
-<img alt="Autocar NTS TOUR" class="autocar-static" height="400" loading="lazy" src="assets/img/bus3.webp" width="600"/>
+<img alt="Autocar NTS TOUR" class="autocar-static" src="assets/img/bus3.webp"/>
 </div>
 <p class="motto">
     Alege! Călătorește! Bucură-te!
@@ -103,12 +117,12 @@
 <div class="top-right">
 <ul class="top-header-nav">
 <li>
-<a href="contact.html" title="Support">
+<a href="contact.html">
           Support
          </a>
 </li>
 <li>
-<a href="intrebari.html" title="Întrebări frecvente">
+<a href="intrebari.html">
           Întrebări frecvente
          </a>
 </li>
@@ -137,9 +151,7 @@
 <div class="contact-header-row d-none d-lg-flex justify-content-between align-items-start w-100" style="margin-top: 0px; padding: 4px 30px 0 30px;">
 <!-- LOGO -->
 <div class="site-logo" style="flex-shrink: 0;">
-<a href="index.html">
-<img alt="Logo" height="400" loading="lazy" src="assets/img/logo-dark.webp" style="max-height: 70px;" width="600"/>
-</a>
+<img alt="Logo" src="assets/img/logo-dark.webp" style="max-height: 70px;"/>
 </div>
 <!-- INFO SECTION DREAPTA -->
 <div class="contact-info-bar d-flex align-items-start" style="font-size: 12.5px; font-weight: 500; gap: 80px;">
@@ -149,7 +161,7 @@
 <div style="color: #00c0f1; font-weight: bold; text-align: center;">
           Locație
          </div>
-<img alt="Location" height="400" loading="lazy" src="assets/img/location-pin.webp" style="height: 14px; margin: 2px auto;" width="600"/>
+<img alt="Location" src="assets/img/location-pin.webp" style="height: 14px; margin: 2px auto;"/>
 </div>
 <div style="display: flex; flex-direction: column;">
 <div style="color: #001f3f;">
@@ -166,7 +178,7 @@
 <div style="color: #00c0f1; font-weight: bold; text-align: center;">
           Email
          </div>
-<img alt="Email" height="400" loading="lazy" src="assets/img/email.webp" style="height: 14px; margin: 2px auto;" width="600"/>
+<img alt="Email" src="assets/img/email.webp" style="height: 14px; margin: 2px auto;"/>
 </div>
 <div style="display: flex; flex-direction: column;">
 <div style="color: #001f3f;">
@@ -183,7 +195,7 @@
 <div style="color: #00c0f1; font-weight: bold; text-align: center;">
           Telefon
          </div>
-<img alt="Phone" height="400" loading="lazy" src="assets/img/call.webp" style="height: 14px; margin: 2px auto;" width="600"/>
+<img alt="Phone" src="assets/img/call.webp" style="height: 14px; margin: 2px auto;"/>
 </div>
 <div style="display: flex; flex-direction: column;">
 <div style="color: #000;">
@@ -201,145 +213,143 @@
 <!--/.mid-header-->
 <div class="nav-menu-wrapper">
 <div id="nav-bus">
-<img alt="Autobuz NTS TOUR" height="400" loading="lazy" src="assets/img/bus3.webp" style="position: absolute; bottom: -10px; left: -100px; height: 40px; z-index: 10; animation: drivebus 10s linear infinite;" width="600"/>
+<img alt="Autobuz NTS TOUR" src="assets/img/bus3.webp" style="position: absolute; bottom: -10px; left: -100px; height: 40px; z-index: 10; animation: drivebus 10s linear infinite;"/>
 </div>
 <div class="container-fluid px-0">
 <div class="nav-menu-inner">
 <div class="site-logo">
-<a href="index.html">
-<img alt="Logo" height="400" loading="lazy" src="assets/img/logo-dark.webp" width="600"/>
-</a>
+<img alt="Logo" src="assets/img/logo-dark.webp"/>
 </div>
 <!--/.site-logo-->
 <div class="header-menu-wrap">
 <ul class="nav-menu">
 <li>
-<a href="index.html" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;" title="Acasă">
+<a href="index.html" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">
           Acasă
          </a>
 </li>
 <li class="dropdown_menu">
-<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;" title="Despre Noi">
+<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">
           Despre Noi
          </a>
 <ul>
 <li>
-<a href="despre-noi.html" title="Despre NTS TOUR">
+<a href="despre-noi.html">
             Despre NTS TOUR
            </a>
 </li>
 <li>
-<a href="echipa.html" title="Echipa noastră">
+<a href="echipa.html">
             Echipa noastră
            </a>
 </li>
 <li>
-<a href="detalii-servicii.html" title="Detalii Servicii">
+<a href="detalii-servicii.html">
             Detalii Servicii
            </a>
 </li>
 <li>
-<a href="parereata.html" title="Păreri Clienți">
+<a href="parereata.html">
             Păreri Clienți
            </a>
 </li>
 <li>
-<a href="pagina-aplicare.html" title="Hai în echipă">
+<a href="pagina-aplicare.html">
             Hai în echipă
            </a>
 </li>
 </ul>
 </li>
 <li class="dropdown_menu">
-<a href="#" style="color: red; font-weight: bold; font-size: 1.1em; text-shadow: 0 0 5px red; animation: redglow 1.5s ease-in-out infinite alternate;" title="🧭 Excursii">
+<a href="#" style="color: red; font-weight: bold; font-size: 1.1em; text-shadow: 0 0 5px red; animation: redglow 1.5s ease-in-out infinite alternate;">
           🧭 Excursii
          </a>
 <ul>
 <li>
-<a href="excursiezi.html" title="Excursie 1 zi">
+<a href="excursiezi.html">
             Excursie 1 zi
            </a>
 </li>
 <li>
-<a href="exploreazaromania.html" title="Explorează România">
+<a href="exploreazaromania.html">
             Explorează România
            </a>
 </li>
 <li>
-<a href="exploreazarolumea.html" title="Explorează Lumea">
+<a href="exploreazarolumea.html">
             Explorează Lumea
            </a>
 </li>
 </ul>
 </li>
 <li class="dropdown_menu">
-<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;" title="Rezervări">
+<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">
           Rezervări
          </a>
 <ul>
 <li>
-<a href="rezervare.html" title="Rezervă o mașină">
+<a href="rezervare.html">
             Rezervă o mașină
            </a>
 </li>
 <li>
-<a href="daruiesteocalatorie.html" title="Dăruiește o călătorie">
+<a href="daruiesteocalatorie.html">
             Dăruiește o călătorie
            </a>
 </li>
 </ul>
 </li>
 <li class="dropdown_menu">
-<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;" title="Flotă">
+<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">
           Flotă
          </a>
 <ul>
 <li>
-<a href="autocar.html" title="Autocar">
+<a href="autocar.html">
             Autocar
            </a>
 </li>
 <li>
-<a href="microbuz.html" title="Microbuz">
+<a href="microbuz.html">
             Microbuz
            </a>
 </li>
 <li>
-<a href="camion.html" title="Camion">
+<a href="camion.html">
             Camion
            </a>
 </li>
 <li>
-<a href="8+1.html" title="8+1">
+<a href="8+1.html">
             8+1
            </a>
 </li>
 </ul>
 </li>
 <li class="dropdown_menu">
-<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;" title="Companii">
+<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">
           Companii
          </a>
 <ul>
 <li>
-<a href="conventii.html" title="Convenții &amp; Evenimente">
+<a href="conventii.html">
             Convenții &amp; Evenimente
            </a>
 </li>
 <li>
-<a href="transportmuncitoridetalii.html" title="Transport Muncitori">
+<a href="transportmuncitoridetalii.html">
             Transport Muncitori
            </a>
 </li>
 <li>
-<a href="transportmarfadetalii.html" title="Transport Marfă">
+<a href="transportmarfadetalii.html">
             Transport Marfă
            </a>
 </li>
 </ul>
 </li>
 <li>
-<a href="contact.html" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;" title="Contact">
+<a href="contact.html" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">
           Contact
          </a>
 </li>
@@ -354,7 +364,7 @@
 <i class="las la-bars">
 </i>
 </div>
-<a class="menu-btn" href="rezervare.html" style="background: linear-gradient(to right, #ff4d4d, #ff0000); color: white; padding: 8px 16px; border-radius: 25px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 3px 10px rgba(255, 0, 0, 0.3); transition: transform 0.3s ease-in-out;" title="Solicitați o mașină">
+<a class="menu-btn" href="rezervare.html" style="background: linear-gradient(to right, #ff4d4d, #ff0000); color: white; padding: 8px 16px; border-radius: 25px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 3px 10px rgba(255, 0, 0, 0.3); transition: transform 0.3s ease-in-out;">
         Solicitați o mașină
        </a>
 </div>
@@ -378,7 +388,7 @@
 <div class="box-inner-wrap d-flex align-items-center">
 <form action="#" id="form" method="get" role="search">
 <input id="popup-search" name="s" placeholder="Caută aici..." type="text"/>
-<button aria-label="Buton" id="popup-search-button" name="submit" type="submit">
+<button id="popup-search-button" name="submit" type="submit">
 <i class="las la-search">
 </i>
 </button>
@@ -395,9 +405,7 @@
 <div class="popup-sidebox" id="popup-sidebox">
 <div class="sidebox-content">
 <div class="site-logo">
-<a href="index.html">
-<img alt="logo" height="400" loading="lazy" src="assets/img/logo-light.webp" width="600"/>
-</a>
+<img alt="logo" src="assets/img/logo-light.webp"/>
 </div>
 <p>
      Oferim experiență, siguranță și profesionalism, indiferent de destinație sau încărcătură!
@@ -463,49 +471,49 @@
 </div>
 <ul>
 <li>
-<a href="#" title="Excursie 1 zi">
+<a href="#">
          Excursie 1 zi
         </a>
 <i class="las la-arrow-right">
 </i>
 </li>
 <li>
-<a href="#" title="Explorează România">
+<a href="#">
          Explorează România
         </a>
 <i class="las la-arrow-right">
 </i>
 </li>
 <li>
-<a href="#" title="Explorează lumea">
+<a href="#">
          Explorează lumea
         </a>
 <i class="las la-arrow-right">
 </i>
 </li>
 <li>
-<a href="#" title="Convenții">
+<a href="#">
          Convenții
         </a>
 <i class="las la-arrow-right">
 </i>
 </li>
 <li>
-<a href="#" title="Transport Evenimente">
+<a href="#">
          Transport Evenimente
         </a>
 <i class="las la-arrow-right">
 </i>
 </li>
 <li>
-<a href="#" title="Transport Marfă">
+<a href="#">
          Transport Marfă
         </a>
 <i class="las la-arrow-right">
 </i>
 </li>
 <li>
-<a href="#" title="Dăruiește o călătorie">
+<a href="#">
          Dăruiește o călătorie
         </a>
 <i class="las la-arrow-right">
@@ -515,9 +523,7 @@
 </div>
 <div class="sidebar-widget banner">
 <div class="banner-info">
-<a href="index.html">
-<img alt="logo" class="logo" height="400" loading="lazy" src="assets/img/logo-light.webp" width="600"/>
-</a>
+<img alt="logo" class="logo" src="assets/img/logo-light.webp"/>
 <h3>
         Pornește-ți călătoria alături de
         <span>
@@ -533,7 +539,7 @@
         </span>
         reducere la rezervări online!
        </h2>
-<a class="default-btn" href="contact.html" title="Prinde oferta!">
+<a class="default-btn" href="contact.html">
         Prinde oferta!
        </a>
 </div>
@@ -546,42 +552,42 @@
 </div>
 <ul class="tags">
 <li>
-<a href="#" title="#transport">
+<a href="#">
          #transport
         </a>
 </li>
 <li>
-<a href="#" title="#turism">
+<a href="#">
          #turism
         </a>
 </li>
 <li>
-<a href="#" title="#transportpersoane">
+<a href="#">
          #transportpersoane
         </a>
 </li>
 <li>
-<a href="#" title="#excursii">
+<a href="#">
          #excursii
         </a>
 </li>
 <li>
-<a href="#" title="#autocare">
+<a href="#">
          #autocare
         </a>
 </li>
 <li>
-<a href="#" title="#microbuze">
+<a href="#">
          #microbuze
         </a>
 </li>
 <li>
-<a href="#" title="#turismromania">
+<a href="#">
          #turismromania
         </a>
 </li>
 <li>
-<a href="#" title="#transportextern">
+<a href="#">
          #transportextern
         </a>
 </li>
@@ -592,16 +598,16 @@
 <div class="col-lg-8">
 <div class="text-end mb-4">
 <div aria-label="Sortare Evenimente" class="btn-group" role="group">
-<button aria-label="Buton" class="btn btn-sortare" onclick="sortEvents('luna')">
+<button class="btn btn-sortare" onclick="sortEvents('luna')">
         ↓ Lună
        </button>
-<button aria-label="Buton" class="btn btn-sortare" onclick="sortEvents('pret')">
+<button class="btn btn-sortare" onclick="sortEvents('pret')">
         ↓ Preț
        </button>
-<button aria-label="Buton" class="btn btn-sortare" onclick="sortEvents('intern')">
+<button class="btn btn-sortare" onclick="sortEvents('intern')">
         ↓ Interne
        </button>
-<button aria-label="Buton" class="btn btn-sortare" onclick="sortEvents('extern')">
+<button class="btn btn-sortare" onclick="sortEvents('extern')">
         ↓ Externe
        </button>
 </div>
@@ -612,7 +618,7 @@
 <div class="row" id="eventList">
 <div class="col-md-6 mb-4">
 <div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" height="400" loading="lazy" src="assets/img/evenimente/delta1.webp" width="600"/>
+<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/delta1.webp"/>
 <div class="card-body">
 <h5 class="card-title">
           23 – 25 Mai 2025
@@ -630,19 +636,19 @@
 <div style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 10px;">
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px;">
-<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;" title="Plătește">
+<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;">
            Plătește
           </a>
-<a class="btn btn-sm btn-primary" href="sulina2325.html" style="flex: 1; text-align: center;" title="Detalii">
+<a class="btn btn-sm btn-primary" href="sulina2325.html" style="flex: 1; text-align: center;">
            Detalii
           </a>
-<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/sulina2325.html" style="flex: 1; text-align: center;" target="_blank" title="Facebook">
+<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/sulina2325.html" style="flex: 1; text-align: center;" target="_blank">
            Facebook
           </a>
-<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/sulina2325.html" style="flex: 1; text-align: center;" target="_blank" title="WhatsApp">
+<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/sulina2325.html" style="flex: 1; text-align: center;" target="_blank">
            WhatsApp
           </a>
-<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank" title="Instagram">
+<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank">
            Instagram
           </a>
 </div>
@@ -651,7 +657,7 @@
 </div>
 <div class="col-md-6 mb-4">
 <div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" height="400" loading="lazy" src="assets/img/evenimente/saturn1.webp" width="600"/>
+<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/saturn1.webp"/>
 <div class="card-body">
 <h5 class="card-title">
           06 – 09 Iunie
@@ -669,19 +675,19 @@
 <div style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 10px;">
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px;">
-<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;" title="Plătește">
+<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;">
            Plătește
           </a>
-<a class="btn btn-sm btn-primary" href="rusaliilamare.html" style="flex: 1; text-align: center;" title="Detalii">
+<a class="btn btn-sm btn-primary" href="rusaliilamare.html" style="flex: 1; text-align: center;">
            Detalii
           </a>
-<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/rusaliilamare.html" style="flex: 1; text-align: center;" target="_blank" title="Facebook">
+<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/rusaliilamare.html" style="flex: 1; text-align: center;" target="_blank">
            Facebook
           </a>
-<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/rusaliilamare.html" style="flex: 1; text-align: center;" target="_blank" title="WhatsApp">
+<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/rusaliilamare.html" style="flex: 1; text-align: center;" target="_blank">
            WhatsApp
           </a>
-<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank" title="Instagram">
+<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank">
            Instagram
           </a>
 </div>
@@ -690,7 +696,7 @@
 </div>
 <div class="col-md-6 mb-4">
 <div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" height="400" loading="lazy" src="assets/img/evenimente/harghita1.webp" width="600"/>
+<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/harghita1.webp"/>
 <div class="card-body">
 <h5 class="card-title">
           14 – 15 Iunie
@@ -708,19 +714,19 @@
 <div style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 10px;">
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px;">
-<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;" title="Plătește">
+<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;">
            Plătește
           </a>
-<a class="btn btn-sm btn-primary" href="tinutulharghitei.html" style="flex: 1; text-align: center;" title="Detalii">
+<a class="btn btn-sm btn-primary" href="tinutulharghitei.html" style="flex: 1; text-align: center;">
            Detalii
           </a>
-<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/tinutulharghitei.html" style="flex: 1; text-align: center;" target="_blank" title="Facebook">
+<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/tinutulharghitei.html" style="flex: 1; text-align: center;" target="_blank">
            Facebook
           </a>
-<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/tinutulharghitei.html" style="flex: 1; text-align: center;" target="_blank" title="WhatsApp">
+<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/tinutulharghitei.html" style="flex: 1; text-align: center;" target="_blank">
            WhatsApp
           </a>
-<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank" title="Instagram">
+<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank">
            Instagram
           </a>
 </div>
@@ -729,7 +735,7 @@
 </div>
 <div class="col-md-6 mb-4">
 <div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" height="400" loading="lazy" src="assets/img/evenimente/moldova3.webp" width="600"/>
+<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/moldova3.webp"/>
 <div class="card-body">
 <h5 class="card-title">
           14 – 17 August
@@ -747,19 +753,19 @@
 <div style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 10px;">
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px;">
-<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;" title="Plătește">
+<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;">
            Plătește
           </a>
-<a class="btn btn-sm btn-primary" href="moldovabucovina.html" style="flex: 1; text-align: center;" title="Detalii">
+<a class="btn btn-sm btn-primary" href="moldovabucovina.html" style="flex: 1; text-align: center;">
            Detalii
           </a>
-<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/moldovabucovina.html" style="flex: 1; text-align: center;" target="_blank" title="Facebook">
+<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/moldovabucovina.html" style="flex: 1; text-align: center;" target="_blank">
            Facebook
           </a>
-<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/moldovabucovina.html" style="flex: 1; text-align: center;" target="_blank" title="WhatsApp">
+<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/moldovabucovina.html" style="flex: 1; text-align: center;" target="_blank">
            WhatsApp
           </a>
-<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank" title="Instagram">
+<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank">
            Instagram
           </a>
 </div>
@@ -768,7 +774,7 @@
 </div>
 <div class="col-md-6 mb-4">
 <div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" height="400" loading="lazy" src="assets/img/evenimente/maramures1.webp" width="600"/>
+<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/maramures1.webp"/>
 <div class="card-body">
 <h5 class="card-title">
           15 – 18 August
@@ -786,19 +792,19 @@
 <div style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 10px;">
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px;">
-<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;" title="Plătește">
+<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;">
            Plătește
           </a>
-<a class="btn btn-sm btn-primary" href="festivaluldacilor.html" style="flex: 1; text-align: center;" title="Detalii">
+<a class="btn btn-sm btn-primary" href="festivaluldacilor.html" style="flex: 1; text-align: center;">
            Detalii
           </a>
-<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/festivaluldacilor.html" style="flex: 1; text-align: center;" target="_blank" title="Facebook">
+<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/festivaluldacilor.html" style="flex: 1; text-align: center;" target="_blank">
            Facebook
           </a>
-<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/festivaluldacilor.html" style="flex: 1; text-align: center;" target="_blank" title="WhatsApp">
+<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/festivaluldacilor.html" style="flex: 1; text-align: center;" target="_blank">
            WhatsApp
           </a>
-<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank" title="Instagram">
+<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank">
            Instagram
           </a>
 </div>
@@ -807,7 +813,7 @@
 </div>
 <div class="col-md-6 mb-4">
 <div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" height="400" loading="lazy" src="assets/img/evenimente/colibita1.webp" width="600"/>
+<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/colibita1.webp"/>
 <div class="card-body">
 <h5 class="card-title">
           17 – 20 August
@@ -825,19 +831,19 @@
 <div style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 10px;">
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px;">
-<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;" title="Plătește">
+<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;">
            Plătește
           </a>
-<a class="btn btn-sm btn-primary" href="sejurcolibita.html" style="flex: 1; text-align: center;" title="Detalii">
+<a class="btn btn-sm btn-primary" href="sejurcolibita.html" style="flex: 1; text-align: center;">
            Detalii
           </a>
-<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/sejurcolibita.html" style="flex: 1; text-align: center;" target="_blank" title="Facebook">
+<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/sejurcolibita.html" style="flex: 1; text-align: center;" target="_blank">
            Facebook
           </a>
-<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/sejurcolibita.html" style="flex: 1; text-align: center;" target="_blank" title="WhatsApp">
+<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/sejurcolibita.html" style="flex: 1; text-align: center;" target="_blank">
            WhatsApp
           </a>
-<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank" title="Instagram">
+<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank">
            Instagram
           </a>
 </div>
@@ -846,7 +852,7 @@
 </div>
 <div class="col-md-6 mb-4">
 <div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" height="400" loading="lazy" src="assets/img/evenimente/saturn1.webp" width="600"/>
+<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/saturn1.webp"/>
 <div class="card-body">
 <h5 class="card-title">
           04 – 07 Septembrie
@@ -864,19 +870,19 @@
 <div style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 10px;">
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px;">
-<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;" title="Plătește">
+<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;">
            Plătește
           </a>
-<a class="btn btn-sm btn-primary" href="sejurmareaneagra.html" style="flex: 1; text-align: center;" title="Detalii">
+<a class="btn btn-sm btn-primary" href="sejurmareaneagra.html" style="flex: 1; text-align: center;">
            Detalii
           </a>
-<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/sejurmareaneagra.html" style="flex: 1; text-align: center;" target="_blank" title="Facebook">
+<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/sejurmareaneagra.html" style="flex: 1; text-align: center;" target="_blank">
            Facebook
           </a>
-<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/sejurmareaneagra.html" style="flex: 1; text-align: center;" target="_blank" title="WhatsApp">
+<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/sejurmareaneagra.html" style="flex: 1; text-align: center;" target="_blank">
            WhatsApp
           </a>
-<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank" title="Instagram">
+<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank">
            Instagram
           </a>
 </div>
@@ -885,7 +891,7 @@
 </div>
 <div class="col-md-6 mb-4">
 <div class="card shadow-sm h-100 border rounded">
-<img alt="Prislop" class="card-img-top" height="400" loading="lazy" src="assets/img/evenimente/felix1.webp" width="600"/>
+<img alt="Prislop" class="card-img-top" src="assets/img/evenimente/felix1.webp"/>
 <div class="card-body">
 <h5 class="card-title">
           (16 – 21 Noiembrie
@@ -903,19 +909,19 @@
 <div style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 10px;">
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px;">
-<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;" title="Plătește">
+<a class="btn btn-sm btn-success" href="https://buy.stripe.com/YOUR_LINK_HERE" style="flex: 1; text-align: center;">
            Plătește
           </a>
-<a class="btn btn-sm btn-primary" href="sejurbailefelix.html" style="flex: 1; text-align: center;" title="Detalii">
+<a class="btn btn-sm btn-primary" href="sejurbailefelix.html" style="flex: 1; text-align: center;">
            Detalii
           </a>
-<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/sejurbailefelix.html" style="flex: 1; text-align: center;" target="_blank" title="Facebook">
+<a class="btn btn-sm btn-info" href="https://www.facebook.com/sharer/sharer.php?u=https://ntstour.ro/sejurbailefelix.html" style="flex: 1; text-align: center;" target="_blank">
            Facebook
           </a>
-<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/sejurbailefelix.html" style="flex: 1; text-align: center;" target="_blank" title="WhatsApp">
+<a class="btn btn-sm btn-success" href="https://api.whatsapp.com/send?text=https://ntstour.ro/sejurbailefelix.html" style="flex: 1; text-align: center;" target="_blank">
            WhatsApp
           </a>
-<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank" title="Instagram">
+<a class="btn btn-sm btn-danger" href="https://www.instagram.com/" style="flex: 1; text-align: center;" target="_blank">
            Instagram
           </a>
 </div>
@@ -993,9 +999,7 @@
 <div class="row align-items-end">
 <div class="col-lg-8">
 <div class="brand">
-<a class="footer-logo" href="index.html">
-<img alt="logo" height="400" loading="lazy" src="assets/img/logo-light.webp" width="600"/>
-</a>
+<img alt="logo" src="assets/img/logo-light.webp"/>
 <p>
           Indiferent că vorbim despre turism, transport muncitori sau logistică, ne ocupăm de tot – 
     rapid, sigur și bine organizat. Garanția noastră? Servicii eficiente și adaptate vremurilor.
@@ -1010,7 +1014,7 @@
 <span>
            Rezervări:
           </span>
-<a href="tel:+40 724 471 395" title="+40 724 471 395">
+<a href="tel:+40 724 471 395">
            +40 724 471 395
           </a>
 </p>
@@ -1062,27 +1066,27 @@
 </div>
 <ul class="footer-links">
 <li>
-<a href="book-taxi.html" title="Servicii de rezervare flota NTS TOUR">
+<a href="book-taxi.html">
            Servicii de rezervare flota NTS TOUR
           </a>
 </li>
 <li>
-<a href="faqs.html" title="Ai nevoie de ajutor?">
+<a href="faqs.html">
            Ai nevoie de ajutor?
           </a>
 </li>
 <li>
-<a href="about-us.html" title="Politica GDPR">
+<a href="about-us.html">
            Politica GDPR
           </a>
 </li>
 <li>
-<a href="about-company.html" title="Condiții generale">
+<a href="about-company.html">
            Condiții generale
           </a>
 </li>
 <li>
-<a href="contact.html" title="Contact">
+<a href="contact.html">
            Contact
           </a>
 </li>
@@ -1122,7 +1126,7 @@
 <form action="#" class="subscribe-form">
 <input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
 <input name="action" type="hidden" value="mailchimpsubscribe"/>
-<button aria-label="Buton" class="submit">
+<button class="submit">
           Trimite-mi ofertele
          </button>
 <div class="clearfix">
@@ -1151,27 +1155,27 @@
 <div class="copyright-wrap">
 <div class="container d-flex justify-content-between align-items-start flex-wrap text-center py-4" style="column-gap: 80px; row-gap: 30px;">
 <div class="d-flex flex-column align-items-center">
-<img alt="Date firmă" height="400" loading="lazy" src="assets/img/datefirma.webp" style="height: 28px;" width="600"/>
-<a class="footer-white-link" href="https://www.listafirme.ro/serban-nts-tour-srl-44975988/" title="Date firmă">
+<img alt="Date firmă" src="assets/img/datefirma.webp" style="height: 28px;"/>
+<a class="footer-white-link" href="https://www.listafirme.ro/serban-nts-tour-srl-44975988/">
        Date firmă
       </a>
 </div>
 <div class="d-flex flex-column align-items-center">
-<img alt="ANPC" height="400" loading="lazy" src="assets/img/anpc.webp" style="height: 28px;" width="600"/>
-<a class="footer-white-link" href="https://eservicii.anpc.ro/" target="_blank" title="ANPC">
+<img alt="ANPC" src="assets/img/anpc.webp" style="height: 28px;"/>
+<a class="footer-white-link" href="https://eservicii.anpc.ro/" target="_blank">
        ANPC
       </a>
 </div>
 <div class="d-flex flex-column align-items-center">
-<img alt="Media Expert Solution" height="400" loading="lazy" src="assets/img/mediaexpertsolution.webp" style="height: 28px;" width="600"/>
-<a class="footer-white-link" href="https://mediaexpertsolution.com" title="Media Expert Solution">
+<img alt="Media Expert Solution" src="assets/img/mediaexpertsolution.webp" style="height: 28px;"/>
+<a class="footer-white-link" href="https://mediaexpertsolution.com">
        Media Expert Solution
       </a>
 </div>
 <div class="d-flex flex-column align-items-center">
 <div class="d-flex gap-2 justify-content-center">
-<img alt="Mastercard" height="400" loading="lazy" src="assets/img/mastercard.webp" style="height: 28px;" width="600"/>
-<img alt="Visa" height="400" loading="lazy" src="assets/img/visa.webp" style="height: 28px;" width="600"/>
+<img alt="Mastercard" src="assets/img/mastercard.webp" style="height: 28px;"/>
+<img alt="Visa" src="assets/img/visa.webp" style="height: 28px;"/>
 </div>
 <span class="footer-white-link">
        Modalități de plată
@@ -1202,7 +1206,7 @@
 </footer>
 <!--/.footer-section-->
 <div id="scrollup">
-<button aria-label="Buton" class="scroll-to-top" id="scroll-top">
+<button class="scroll-to-top" id="scroll-top">
 <i class="las la-arrow-up">
 </i>
 </button>
@@ -1216,31 +1220,31 @@
 </div>
 <!--/.dl-cursor-->
 <!--jQuery Lib-->
-<script defer="defer" src="assets/js/vendor/jquary-3.6.0.min.js">
+<script src="assets/js/vendor/jquary-3.6.0.min.js">
 </script>
-<script defer="defer" src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js">
+<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js">
 </script>
 <script src="assets/js/vendor/jquery.ajaxchimp.min.js">
 </script>
-<script defer="defer" src="assets/js/vendor/bootstrap.min.js">
+<script src="assets/js/vendor/bootstrap.min.js">
 </script>
-<script defer="defer" src="assets/js/vendor/popper.min.js">
+<script src="assets/js/vendor/popper.min.js">
 </script>
-<script defer="defer" src="assets/js/vendor/swiper.min.js">
+<script src="assets/js/vendor/swiper.min.js">
 </script>
 <script src="assets/js/vendor/jquery.datetimepicker.full.js">
 </script>
 <script src="assets/js/vendor/jquery.nice-select.min.js">
 </script>
-<script defer="defer" src="assets/js/vendor/venobox.min.js">
+<script src="assets/js/vendor/venobox.min.js">
 </script>
-<script defer="defer" src="assets/js/vendor/smooth-scroll.js">
+<script src="assets/js/vendor/smooth-scroll.js">
 </script>
-<script defer="defer" src="assets/js/vendor/wow.min.js">
+<script src="assets/js/vendor/wow.min.js">
 </script>
-<script defer="defer" src="assets/js/book-ride.js">
+<script src="assets/js/book-ride.js">
 </script>
-<script defer="defer" src="assets/js/main.js">
+<script src="assets/js/main.js">
 </script>
 </body>
 </html>

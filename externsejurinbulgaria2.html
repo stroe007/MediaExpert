@@ -2,26 +2,26 @@
 
 <html class="no-js" lang="en">
 <!--<![endif]-->
-<head><link as_="image" href="assets/img/slider-bg2.webp" rel="preload" type="image/webp"/>
+<head>
 <title>Sejur Bulgaria Sunny Beach – Hotel Wela 4*, 10–13 Iulie | NTS TOUR</title><meta content="Vacanță în Bulgaria – Sunny Beach, Hotel Wela 4*, 10–13 iulie. Cazare all inclusive, transport, ghid și excursii opționale. Oferit de NTS TOUR!" name="description"/><meta content="Sejur Sunny Beach Bulgaria – Relaxare All Inclusive | NTS TOUR" property="og:title"/><meta content="3 nopți cazare la Hotel Wela 4*, plajă, excursii la Nessebar și Varna, atmosferă de vacanță. Rezervă cu NTS TOUR!" property="og:description"/><meta content="https://ntstour.ro/assets/img/evenimente/prislop.png" property="og:image"/><meta content="https://ntstour.ro/externsejurinbulgaria2.html" property="og:url"/><meta content="index, follow" name="robots"/><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="MediaExpertSolution" name="Stroe Marius"/>
 <link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
 <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="assets/css/animate.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/fontawesome.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/line-awesome.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/keyframe-animation.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/jquery.datetimepicker.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/nice-select.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/venobox.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/swiper.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/elements.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/header.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/slider.css" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link href="assets/css/blog.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/animate.min.css" rel="stylesheet"/>
+<link href="assets/css/fontawesome.min.css" rel="stylesheet"/>
+<link href="assets/css/line-awesome.min.css" rel="stylesheet"/>
+<link href="assets/css/keyframe-animation.css" rel="stylesheet"/>
+<link href="assets/css/jquery.datetimepicker.min.css" rel="stylesheet"/>
+<link href="assets/css/nice-select.css" rel="stylesheet"/>
+<link href="assets/css/venobox.min.css" rel="stylesheet"/>
+<link href="assets/css/swiper.min.css" rel="stylesheet"/>
+<link href="assets/css/elements.css" rel="stylesheet"/>
+<link href="assets/css/header.css" rel="stylesheet"/>
+<link href="assets/css/slider.css" rel="stylesheet"/>
+<link href="assets/css/blog.css" rel="stylesheet"/>
 <link href="assets/css/main.css" rel="stylesheet"/>
-<link href="assets/css/responsive.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/responsive.css" rel="stylesheet"/>
 <style>
 @keyframes redglow {
   from {
@@ -61,45 +61,21 @@
 }
 </style>
 <style>
-    .galerie-static img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        aspect-ratio: 3 / 2;
-        object-fit: cover;
-        border-radius: 12px;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-    @media (min-width: 769px) {
-        .galerie-static img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-        }
-    }
-    </style>
-<style>
 .galerie-poze {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 20px;
 }
-.galerie-poze .galerie-static,
-.galerie-poze .galerie-static img {
+.galerie-poze a img {
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
 }
-@media (min-width: 769px) {
-  .galerie-poze .galerie-static img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-  }
+.galerie-poze a:hover img {
+  transform: scale(1.05);
 }
 @media (max-width: 768px) {
   .galerie-poze {
@@ -107,6 +83,20 @@
   }
 }
 </style>
+<style>
+  .gallery img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  @media (hover: hover) {
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+      cursor: default;
+    }
+  }
+</style>
+
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -114,7 +104,7 @@
 	</p><![endif]-->
 <div class="site-preloader">
 <div class="autocar-wrapper">
-<img alt="Autocar NTS TOUR" class="autocar-static" height="400" loading="lazy" src="assets/img/bus3.webp" width="600"/>
+<img alt="Autocar NTS TOUR" class="autocar-static" src="assets/img/bus3.webp"/>
 </div>
 <p class="motto">Alege! Călătorește! Bucură-te!</p>
 </div>
@@ -133,11 +123,11 @@
 </div>
 <div class="top-right">
 <ul class="top-header-nav">
-<li><a href="contact.html" title="Support">Support</a></li>
-<li><a href="intrebari.html" title="Întrebări frecvente">Întrebări frecvente</a></li>
+<li><a href="contact.html">Support</a></li>
+<li><a href="intrebari.html">Întrebări frecvente</a></li>
 </ul>
 <ul class="header-social-share">
-<li><a href="https://www.facebook.com/ScSapunariServSRL" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://www.facebook.com/ScSapunariServSRL"><i class="fab fa-facebook-f"></i></a></li>
 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
 </ul>
 </div>
@@ -148,7 +138,7 @@
 <div class="container-fluid px-0"><div class="contact-header-row d-none d-lg-flex justify-content-between align-items-start w-100" style="margin-top: 0px; padding: 4px 30px 0 30px;">
 <!-- LOGO -->
 <div class="site-logo" style="flex-shrink: 0;">
-<a href="index.html"><img alt="Logo" height="400" loading="lazy" src="assets/img/logo-dark.webp" style="max-height: 70px;" width="600"/></a>
+<img alt="Logo" src="assets/img/logo-dark.webp" style="max-height: 70px;"/>
 </div>
 <!-- INFO SECTION DREAPTA -->
 <div class="contact-info-bar d-flex align-items-start" style="font-size: 12.5px; font-weight: 500; gap: 80px;">
@@ -156,7 +146,7 @@
 <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 10px;">
 <div style="display: flex; flex-direction: column; align-items: center;">
 <div style="color: #00c0f1; font-weight: bold; text-align: center;">Locație</div>
-<img alt="Location" height="400" loading="lazy" src="assets/img/location-pin.webp" style="height: 14px; margin: 2px auto;" width="600"/>
+<img alt="Location" src="assets/img/location-pin.webp" style="height: 14px; margin: 2px auto;"/>
 </div>
 <div style="display: flex; flex-direction: column;">
 <div style="color: #001f3f;">România, Mizil,</div>
@@ -167,7 +157,7 @@
 <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 10px;">
 <div style="display: flex; flex-direction: column; align-items: center;">
 <div style="color: #00c0f1; font-weight: bold; text-align: center;">Email</div>
-<img alt="Email" height="400" loading="lazy" src="assets/img/email.webp" style="height: 14px; margin: 2px auto;" width="600"/>
+<img alt="Email" src="assets/img/email.webp" style="height: 14px; margin: 2px auto;"/>
 </div>
 <div style="display: flex; flex-direction: column;">
 <div style="color: #001f3f;">office@ntstour.ro</div>
@@ -178,7 +168,7 @@
 <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 10px;">
 <div style="display: flex; flex-direction: column; align-items: center;">
 <div style="color: #00c0f1; font-weight: bold; text-align: center;">Telefon</div>
-<img alt="Phone" height="400" loading="lazy" src="assets/img/call.webp" style="height: 14px; margin: 2px auto;" width="600"/>
+<img alt="Phone" src="assets/img/call.webp" style="height: 14px; margin: 2px auto;"/>
 </div>
 <div style="display: flex; flex-direction: column;">
 <div style="color: #000;">Solicită Informații</div>
@@ -189,43 +179,43 @@
 </div></div>
 </div>
 <!--/.mid-header-->
-<div class="nav-menu-wrapper"><div id="nav-bus"><img alt="Autobuz NTS TOUR" height="400" loading="lazy" src="assets/img/bus3.webp" style="position: absolute; bottom: -10px; left: -100px; height: 40px; z-index: 10; animation: drivebus 10s linear infinite;" width="600"/></div>
+<div class="nav-menu-wrapper"><div id="nav-bus"><img alt="Autobuz NTS TOUR" src="assets/img/bus3.webp" style="position: absolute; bottom: -10px; left: -100px; height: 40px; z-index: 10; animation: drivebus 10s linear infinite;"/></div>
 <div class="container-fluid px-0">
 <div class="nav-menu-inner">
 <div class="site-logo">
-<a href="index.html"><img alt="Logo" height="400" loading="lazy" src="assets/img/logo-dark.webp" width="600"/></a>
+<img alt="Logo" src="assets/img/logo-dark.webp"/>
 </div><!--/.site-logo-->
 <div class="header-menu-wrap">
-<ul class="nav-menu"><li><a href="index.html" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;" title="Acasă">Acasă</a></li><li class="dropdown_menu">
-<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;" title="Despre Noi">Despre Noi</a>
+<ul class="nav-menu"><li><a href="index.html" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">Acasă</a></li><li class="dropdown_menu">
+<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">Despre Noi</a>
 <ul>
-<li><a href="despre-noi.html" title="Despre NTS TOUR">Despre NTS TOUR</a></li>
-<li><a href="echipa.html" title="Echipa noastră">Echipa noastră</a></li>
-<li><a href="detalii-servicii.html" title="Detalii Servicii">Detalii Servicii</a></li>
-<li><a href="parereata.html" title="Păreri Clienți">Păreri Clienți</a></li>
-<li><a href="pagina-aplicare.html" title="Hai în echipă">Hai în echipă</a></li></ul>
-</li><li class="dropdown_menu"><a href="#" style="color: red; font-weight: bold; font-size: 1.1em; text-shadow: 0 0 5px red; animation: redglow 1.5s ease-in-out infinite alternate;" title="🧭 Excursii">🧭 Excursii</a><ul><li><a href="excursiezi.html" title="Excursie 1 zi">Excursie 1 zi</a></li><li><a href="exploreazaromania.html" title="Explorează România">Explorează România</a></li><li><a href="exploreazarolumea.html" title="Explorează Lumea">Explorează Lumea</a></li></ul></li><li class="dropdown_menu">
-<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;" title="Rezervări">Rezervări</a>
+<li><a href="despre-noi.html">Despre NTS TOUR</a></li>
+<li><a href="echipa.html">Echipa noastră</a></li>
+<li><a href="detalii-servicii.html">Detalii Servicii</a></li>
+<li><a href="parereata.html">Păreri Clienți</a></li>
+<li><a href="pagina-aplicare.html">Hai în echipă</a></li></ul>
+</li><li class="dropdown_menu"><a href="#" style="color: red; font-weight: bold; font-size: 1.1em; text-shadow: 0 0 5px red; animation: redglow 1.5s ease-in-out infinite alternate;">🧭 Excursii</a><ul><li><a href="excursiezi.html">Excursie 1 zi</a></li><li><a href="exploreazaromania.html">Explorează România</a></li><li><a href="exploreazarolumea.html">Explorează Lumea</a></li></ul></li><li class="dropdown_menu">
+<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">Rezervări</a>
 <ul>
-<li><a href="rezervare.html" title="Rezervă o mașină">Rezervă o mașină</a></li>
-<li><a href="daruiesteocalatorie.html" title="Dăruiește o călătorie">Dăruiește o călătorie</a></li>
+<li><a href="rezervare.html">Rezervă o mașină</a></li>
+<li><a href="daruiesteocalatorie.html">Dăruiește o călătorie</a></li>
 </ul>
 </li><li class="dropdown_menu">
-<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;" title="Flotă">Flotă</a>
+<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">Flotă</a>
 <ul>
-<li><a href="autocar.html" title="Autocar">Autocar</a></li>
-<li><a href="microbuz.html" title="Microbuz">Microbuz</a></li>
-<li><a href="camion.html" title="Camion">Camion</a></li>
-<li><a href="8+1.html" title="8+1">8+1</a></li>
+<li><a href="autocar.html">Autocar</a></li>
+<li><a href="microbuz.html">Microbuz</a></li>
+<li><a href="camion.html">Camion</a></li>
+<li><a href="8+1.html">8+1</a></li>
 </ul>
 </li><li class="dropdown_menu">
-<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;" title="Companii">Companii</a>
+<a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">Companii</a>
 <ul>
-<li><a href="conventii.html" title="Convenții &amp; Evenimente">Convenții &amp; Evenimente</a></li>
-<li><a href="transportmuncitoridetalii.html" title="Transport Muncitori">Transport Muncitori</a></li>
-<li><a href="transportmarfadetalii.html" title="Transport Marfă">Transport Marfă</a></li>
+<li><a href="conventii.html">Convenții &amp; Evenimente</a></li>
+<li><a href="transportmuncitoridetalii.html">Transport Muncitori</a></li>
+<li><a href="transportmarfadetalii.html">Transport Marfă</a></li>
 </ul>
-</li><li><a href="contact.html" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;" title="Contact">Contact</a></li></ul>
+</li><li><a href="contact.html" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">Contact</a></li></ul>
 </div>
 <div class="menu-right-item">
 <div class="search-icon dl-search-icon" style="color: white; background-color: #001f3f; border-radius: 50%; padding: 6px; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); transition: transform 0.3s ease-in-out;">
@@ -234,7 +224,7 @@
 <div class="sidebox-icon dl-sidebox-icon">
 <i class="las la-bars"></i>
 </div>
-<a class="menu-btn" href="rezervare.html" style="background: linear-gradient(to right, #ff4d4d, #ff0000); color: white; padding: 8px 16px; border-radius: 25px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 3px 10px rgba(255, 0, 0, 0.3); transition: transform 0.3s ease-in-out;" title="Solicitați o mașină">Solicitați o mașină</a>
+<a class="menu-btn" href="rezervare.html" style="background: linear-gradient(to right, #ff4d4d, #ff0000); color: white; padding: 8px 16px; border-radius: 25px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 3px 10px rgba(255, 0, 0, 0.3); transition: transform 0.3s ease-in-out;">Solicitați o mașină</a>
 </div>
 <div class="mobile-menu-icon">
 <div class="burger-menu">
@@ -253,7 +243,7 @@
 <div class="box-inner-wrap d-flex align-items-center">
 <form action="#" id="form" method="get" role="search">
 <input id="popup-search" name="s" placeholder="Caută aici..." type="text"/>
-<button aria-label="Buton" id="popup-search-button" name="submit" type="submit">
+<button id="popup-search-button" name="submit" type="submit">
 <i class="las la-search"></i>
 </button>
 </form>
@@ -265,7 +255,7 @@
 <div class="popup-sidebox" id="popup-sidebox">
 <div class="sidebox-content">
 <div class="site-logo">
-<a href="index.html"><img alt="logo" height="400" loading="lazy" src="assets/img/logo-light.webp" width="600"/></a>
+<img alt="logo" src="assets/img/logo-light.webp"/>
 </div>
 <p>Oferim experiență, siguranță și profesionalism, indiferent de destinație sau încărcătură!</p>
 <ul class="sidebox-list">
@@ -290,25 +280,25 @@
 </section>
 <section class="excursie-header-animata">
 <div class="decor-sun">
-<img alt="Soare" class="soare" height="400" loading="lazy" src="assets/img/sorinel.png" width="600"/>
+<img alt="Soare" class="soare" src="assets/img/sorinel.png"/>
 </div>
 <!-- Avion și fum animat independent -->
 <div class="traseu-animat">
-<img alt="Avion de hârtie" class="avion-zburator" height="400" loading="lazy" src="assets/img/avio.png" width="600"/>
+<img alt="Avion de hârtie" class="avion-zburator" src="assets/img/avio.png"/>
 <div class="fum-avion"></div>
 </div>
 <div class="header-content">
-<img alt="Logo NTS TOUR" class="logo-dark" height="400" loading="lazy" src="assets/img/logo-dark.webp" width="600"/>
+<img alt="Logo NTS TOUR" class="logo-dark" src="assets/img/logo-dark.webp"/>
 <h2>Alege! Călătorește! Bucură-te!</h2>
 <p class="excursie-sub"> <strong>  BULGARIA SUNNY BEACH – HOTEL WELA 4* 10-13 IULIE</strong></p>
 </div>
 </section>
 <section class="excursie-unica">
 <div class="galerie-poze">
-<a class="galerie-static" style="pointer-events: none;"><img alt="Prislop 1" height="400" loading="lazy" src="assets/img/evenimente/prislop.png" width="600"/></a>
-<a class="galerie-static" style="pointer-events: none;"><img alt="Prislop 2" height="400" loading="lazy" src="assets/img/evenimente/prislop.png" width="600"/></a>
-<a class="galerie-static" style="pointer-events: none;"><img alt="Prislop 3" height="400" loading="lazy" src="assets/img/evenimente/prislop.png" width="600"/></a>
-<a class="galerie-static" style="pointer-events: none;"><img alt="Prislop 4" height="400" loading="lazy" src="assets/img/evenimente/prislop.png" width="600"/></a>
+<img alt="Prislop 1" src="assets/img/evenimente/prislop.png"/>
+<img alt="Prislop 2" src="assets/img/evenimente/prislop.png"/>
+<img alt="Prislop 3" src="assets/img/evenimente/prislop.png"/>
+<img alt="Prislop 4" src="assets/img/evenimente/prislop.png"/>
 </div>
 <div class="excursie-detalii">
 <h3>Detalii excursie:</h3>
@@ -339,7 +329,7 @@ Ajungem, servim prânzul și ne cazăm la hotel de 4* - Hotel Wela.</p>
 <div class="row align-items-end">
 <div class="col-lg-8">
 <div class="brand">
-<a class="footer-logo" href="index.html"><img alt="logo" height="400" loading="lazy" src="assets/img/logo-light.webp" width="600"/></a>
+<img alt="logo" src="assets/img/logo-light.webp"/>
 <p>Indiferent că vorbim despre turism, transport muncitori sau logistică, ne ocupăm de tot – 
     rapid, sigur și bine organizat. Garanția noastră? Servicii eficiente și adaptate vremurilor.</p>
 </div>
@@ -347,7 +337,7 @@ Ajungem, servim prânzul și ne cazăm la hotel de 4* - Hotel Wela.</p>
 <div class="col-lg-4">
 <div class="footer-call">
 <i class="las la-phone-volume"></i>
-<p><span>Rezervări:</span><a href="tel:+40 724 471 395" title="+40 724 471 395">+40 724 471 395</a></p>
+<p><span>Rezervări:</span><a href="tel:+40 724 471 395">+40 724 471 395</a></p>
 </div>
 </div>
 </div>
@@ -376,11 +366,11 @@ Ajungem, servim prânzul și ne cazăm la hotel de 4* - Hotel Wela.</p>
 <h3>Linkuri utile</h3>
 </div>
 <ul class="footer-links">
-<li><a href="book-taxi.html" title="Servicii de rezervare flota NTS TOUR">Servicii de rezervare flota NTS TOUR</a></li>
-<li><a href="faqs.html" title="Ai nevoie de ajutor?">Ai nevoie de ajutor?</a></li>
-<li><a href="about-us.html" title="Politica GDPR">Politica GDPR</a></li>
-<li><a href="about-company.html" title="Condiții generale">Condiții generale</a></li>
-<li><a href="contact.html" title="Contact">Contact</a></li>
+<li><a href="book-taxi.html">Servicii de rezervare flota NTS TOUR</a></li>
+<li><a href="faqs.html">Ai nevoie de ajutor?</a></li>
+<li><a href="about-us.html">Politica GDPR</a></li>
+<li><a href="about-company.html">Condiții generale</a></li>
+<li><a href="contact.html">Contact</a></li>
 </ul>
 </div>
 </div>
@@ -403,7 +393,7 @@ Ajungem, servim prânzul și ne cazăm la hotel de 4* - Hotel Wela.</p>
 <form action="#" class="subscribe-form">
 <input class="form-control" name="email" placeholder="Your Email" required="" type="email"/>
 <input name="action" type="hidden" value="mailchimpsubscribe"/>
-<button aria-label="Buton" class="submit">Trimite-mi ofertele</button>
+<button class="submit">Trimite-mi ofertele</button>
 <div class="clearfix"></div>
 <div id="subscribe-result">
 <div class="subscription-success"></div>
@@ -424,21 +414,21 @@ Ajungem, servim prânzul și ne cazăm la hotel de 4* - Hotel Wela.</p>
 <div class="copyright-wrap">
 <div class="container d-flex justify-content-between align-items-start flex-wrap text-center py-4" style="column-gap: 80px; row-gap: 30px;">
 <div class="d-flex flex-column align-items-center">
-<img alt="Date firmă" height="400" loading="lazy" src="assets/img/datefirma.webp" style="height: 28px;" width="600"/>
-<a class="footer-white-link" href="https://www.listafirme.ro/serban-nts-tour-srl-44975988/" rel="noopener" title="Date firmă">Date firmă</a>
+<img alt="Date firmă" src="assets/img/datefirma.webp" style="height: 28px;"/>
+<a class="footer-white-link" href="https://www.listafirme.ro/serban-nts-tour-srl-44975988/">Date firmă</a>
 </div>
 <div class="d-flex flex-column align-items-center">
-<img alt="ANPC" height="400" loading="lazy" src="assets/img/anpc.webp" style="height: 28px;" width="600"/>
-<a class="footer-white-link" href="https://eservicii.anpc.ro/" rel="noopener" target="_blank" title="ANPC">ANPC</a>
+<img alt="ANPC" src="assets/img/anpc.webp" style="height: 28px;"/>
+<a class="footer-white-link" href="https://eservicii.anpc.ro/" target="_blank">ANPC</a>
 </div>
 <div class="d-flex flex-column align-items-center">
-<img alt="Media Expert Solution" height="400" loading="lazy" src="assets/img/mediaexpertsolution.webp" style="height: 28px;" width="600"/>
-<a class="footer-white-link" href="https://mediaexpertsolution.com" rel="noopener" title="Media Expert Solution">Media Expert Solution</a>
+<img alt="Media Expert Solution" src="assets/img/mediaexpertsolution.webp" style="height: 28px;"/>
+<a class="footer-white-link" href="https://mediaexpertsolution.com">Media Expert Solution</a>
 </div>
 <div class="d-flex flex-column align-items-center">
 <div class="d-flex gap-2 justify-content-center">
-<img alt="Mastercard" height="400" loading="lazy" src="assets/img/mastercard.webp" style="height: 28px;" width="600"/>
-<img alt="Visa" height="400" loading="lazy" src="assets/img/visa.webp" style="height: 28px;" width="600"/>
+<img alt="Mastercard" src="assets/img/mastercard.webp" style="height: 28px;"/>
+<img alt="Visa" src="assets/img/visa.webp" style="height: 28px;"/>
 </div>
 <span class="footer-white-link">Modalități de plată</span>
 </div>
@@ -467,7 +457,7 @@ Ajungem, servim prânzul și ne cazăm la hotel de 4* - Hotel Wela.</p>
 </footer>
 <!--/.footer-section-->
 <div id="scrollup">
-<button aria-label="Buton" class="scroll-to-top" id="scroll-top">
+<button class="scroll-to-top" id="scroll-top">
 <i class="las la-arrow-up"></i>
 </button>
 </div>
@@ -477,18 +467,18 @@ Ajungem, servim prânzul și ne cazăm la hotel de 4* - Hotel Wela.</p>
 </div>
 <!--/.dl-cursor-->
 <!--jQuery Lib-->
-<script defer="defer" src="assets/js/vendor/jquary-3.6.0.min.js"></script>
-<script defer="defer" src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<script src="assets/js/vendor/jquary-3.6.0.min.js"></script>
+<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 <script src="assets/js/vendor/jquery.ajaxchimp.min.js"></script>
-<script defer="defer" src="assets/js/vendor/bootstrap.min.js"></script>
-<script defer="defer" src="assets/js/vendor/popper.min.js"></script>
-<script defer="defer" src="assets/js/vendor/swiper.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/vendor/popper.min.js"></script>
+<script src="assets/js/vendor/swiper.min.js"></script>
 <script src="assets/js/vendor/jquery.datetimepicker.full.js"></script>
 <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
-<script defer="defer" src="assets/js/vendor/venobox.min.js"></script>
-<script defer="defer" src="assets/js/vendor/smooth-scroll.js"></script>
-<script defer="defer" src="assets/js/vendor/wow.min.js"></script>
-<script defer="defer" src="assets/js/book-ride.js"></script>
-<script defer="defer" src="assets/js/main.js"></script>
+<script src="assets/js/vendor/venobox.min.js"></script>
+<script src="assets/js/vendor/smooth-scroll.js"></script>
+<script src="assets/js/vendor/wow.min.js"></script>
+<script src="assets/js/book-ride.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
