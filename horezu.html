@@ -5,9 +5,7 @@
 <head>
 <title>Excursie Horezu – Salina Ocnele Mari &amp; Ceramică Tradițională | NTS TOUR</title><meta content="Excursie Horezu de 1 zi cu NTS TOUR. Vizitează Salina Ocnele Mari, Mănăstirea Bistrița și Horezu, atelier ceramică. Transport și ghid incluse. Locuri limitate!" name="description"/><meta content="Excursie Horezu – Salina Ocnele Mari și Ceramică de Horezu | NTS TOUR" property="og:title"/><meta content="Experiență culturală în Vâlcea: salină, mănăstiri și artă tradițională românească. Excursie de o zi organizată de NTS TOUR." property="og:description"/><meta content="https://ntstour.ro/assets/img/evenimente/horezu1.webp" property="og:image"/><meta content="https://ntstour.ro/horezu.html" property="og:url"/><meta content="index, follow" name="robots"/><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
 <meta content="MediaExpertSolution" name="Stroe Marius"/>
-
 <link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
 <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="assets/css/animate.min.css" rel="stylesheet"/>
@@ -62,6 +60,25 @@
   height: 0;
 }
 </style>
+
+<style>
+    .galerie-static img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    @media (min-width: 769px) {
+        .galerie-static img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+        }
+    }
+    </style>
 <style>
 .galerie-poze {
   display: grid;
@@ -69,15 +86,21 @@
   gap: 20px;
   padding: 20px;
 }
-.galerie-poze a img {
+.galerie-poze .galerie-static,
+.galerie-poze .galerie-static img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.galerie-poze a:hover img {
-  transform: scale(1.05);
+@media (min-width: 769px) {
+  .galerie-poze .galerie-static img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
 }
 @media (max-width: 768px) {
   .galerie-poze {
@@ -85,7 +108,6 @@
   }
 }
 </style>
-
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -116,7 +138,7 @@
 <li><a href="intrebari.html">Întrebări frecvente</a></li>
 </ul>
 <ul class="header-social-share">
-<li><a href="https://www.facebook.com/ScSapunariServSRL"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://www.facebook.com/ScSapunariServSRL" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
 </ul>
 </div>
@@ -284,18 +306,10 @@
 </section>
 <section class="excursie-unica">
 <div class="galerie-poze">
-<a class="venobox" data-gall="galerie-horezu" data-title="Imagine 1 - Horezu" href="assets/img/evenimente/horezu2.webp">
-<img alt="Horezu 1" src="assets/img/evenimente/horezu2.webp"/>
-</a>
-<a class="venobox" data-gall="galerie-horezu" data-title="Imagine 2 - Horezu" href="assets/img/evenimente/horezu3.webp">
-<img alt="Horezu 2" src="assets/img/evenimente/horezu3.webp"/>
-</a>
-<a class="venobox" data-gall="galerie-horezu" data-title="Imagine 3 - Horezu" href="assets/img/evenimente/horezu4.webp">
-<img alt="Horezu 3" src="assets/img/evenimente/horezu4.webp"/>
-</a>
-<a class="venobox" data-gall="galerie-horezu" data-title="Imagine 4 - Horezu" href="assets/img/evenimente/horezu5.webp">
-<img alt="Horezu 4" src="assets/img/evenimente/horezu5.webp"/>
-</a>
+<a class="galerie-static" style="pointer-events: none;"><img alt="Horezu 1" src="assets/img/evenimente/horezu2.webp"/></a>
+<a class="galerie-static" style="pointer-events: none;"><img alt="Horezu 2" src="assets/img/evenimente/horezu3.webp"/></a>
+<a class="galerie-static" style="pointer-events: none;"><img alt="Horezu 3" src="assets/img/evenimente/horezu4.webp"/></a>
+<a class="galerie-static" style="pointer-events: none;"><img alt="Horezu 4" src="assets/img/evenimente/horezu5.webp"/></a>
 </div>
 <div class="excursie-detalii">
 <h3>Detalii excursie:</h3>
@@ -407,29 +421,29 @@
 <!--/.footer-mid-wrap-->
 <div class="copyright-wrap">
 <div class="container">
-<p><a href="https://mediaexpertsolution.com" target="_blank"><a href="https://mediaexpertsolution.com" onmouseout="this.style.color='#000'" onmouseover="this.style.color='#FF6600'" style="color:#000; text-decoration:none; transition:color 0.3s;" target="_blank">© 2025 MediaExpertSolution</a></a></p>
+<p><a href="https://mediaexpertsolution.com" rel="noopener" target="_blank"><a href="https://mediaexpertsolution.com" onmouseout="this.style.color='#000'" onmouseover="this.style.color='#FF6600'" rel="noopener" style="color:#000; text-decoration:none; transition:color 0.3s;" target="_blank">© 2025 MediaExpertSolution</a></a></p>
 </div>
 </div>
 <!--/.footer-mid-wrap-->
 <div class="copyright-wrap">
 <div class="container d-flex justify-content-between align-items-start flex-wrap text-center py-4" style="column-gap: 80px; row-gap: 30px;">
 <div class="d-flex flex-column align-items-center">
-<img alt="Date firmă" src="assets/img/datefirma.webp" style="height: 28px;">
-<a class="footer-white-link" href="https://www.listafirme.ro/serban-nts-tour-srl-44975988/">Date firmă</a>
-</img></div>
+<img alt="Date firmă" src="assets/img/datefirma.webp" style="height: 28px;"/>
+<a class="footer-white-link" href="https://www.listafirme.ro/serban-nts-tour-srl-44975988/" rel="noopener">Date firmă</a>
+</div>
 <div class="d-flex flex-column align-items-center">
-<img alt="ANPC" src="assets/img/anpc.webp" style="height: 28px;">
-<a class="footer-white-link" href="https://eservicii.anpc.ro/" target="_blank">ANPC</a>
-</img></div>
+<img alt="ANPC" src="assets/img/anpc.webp" style="height: 28px;"/>
+<a class="footer-white-link" href="https://eservicii.anpc.ro/" rel="noopener" target="_blank">ANPC</a>
+</div>
 <div class="d-flex flex-column align-items-center">
-<img alt="Media Expert Solution" src="assets/img/mediaexpertsolution.webp" style="height: 28px;">
-<a class="footer-white-link" href="https://mediaexpertsolution.com">Media Expert Solution</a>
-</img></div>
+<img alt="Media Expert Solution" src="assets/img/mediaexpertsolution.webp" style="height: 28px;"/>
+<a class="footer-white-link" href="https://mediaexpertsolution.com" rel="noopener">Media Expert Solution</a>
+</div>
 <div class="d-flex flex-column align-items-center">
 <div class="d-flex gap-2 justify-content-center">
-<img alt="Mastercard" src="assets/img/mastercard.webp" style="height: 28px;">
-<img alt="Visa" src="assets/img/visa.webp" style="height: 28px;">
-</img></img></div>
+<img alt="Mastercard" src="assets/img/mastercard.webp" style="height: 28px;"/>
+<img alt="Visa" src="assets/img/visa.webp" style="height: 28px;"/>
+</div>
 <span class="footer-white-link">Modalități de plată</span>
 </div>
 </div>
