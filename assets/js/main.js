@@ -39,7 +39,7 @@
         // Mobile Menu
         function mobileMenu() {
             if ($(".header-menu-wrap").length) {
-                $(".nav-menu-inner .burger-menu").on("click", function () {
+                $(".burger-menu").on("click", function () {
                     $(this).toggleClass("menu-open");
                     $(".header-menu-wrap").slideToggle(300);
                 });
