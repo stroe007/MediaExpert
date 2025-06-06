@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Autocar Setra ComfortClass S516 HD – confort premium pentru transport de persoane. Ideal pentru excursii, delegații, rute interne și internaționale. Flota NTS TOUR." name="description"/>
+<meta content="Renault Trafic 8+1 locuri – microbuz ideal pentru transferuri rapide, excursii private și transport VIP. Confort, siguranță și flexibilitate. Disponibil acum în flota NTS TOUR." name="description"/>
 <meta content="Stroe Marius" name="Stroe Marius"/>
 <title>NTS TOUR </title>
 <link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
@@ -44,12 +44,12 @@
 </style><style>
     .search-icon:hover {
         transform: scale(1.1);
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+        
     }
     </style><style>
     .menu-btn:hover {
         transform: scale(1.05);
-        box-shadow: 0 6px 18px rgba(255, 0, 0, 0.6);
+        
     }
     </style><style>
 @keyframes drivebus {
@@ -61,7 +61,71 @@
   overflow: hidden;
   height: 0;
 }
-</style></head>
+</style>
+<style>
+.swiper-container {
+  overflow: hidden;
+}
+.swiper-slide {
+  width: 100% !important;
+}
+</style>
+
+
+<style>
+.taxi-details-img::before {
+  content: none !important;
+  background: none !important;
+  display: none !important;
+}
+</style>
+
+
+<style>
+.taxi-details-img {
+  background: linear-gradient(to right, #001f3f 0%, #003366 100%);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+.taxi-details-img .swiper-slide img {
+  transition: transform 0.4s ease;
+}
+.taxi-details-img .swiper-slide:hover img {
+  transform: scale(1.03);
+}
+</style>
+
+
+<style>
+.taxi-details-img {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  padding: 12px;
+  animation: fadeIn 1s ease-out forwards;
+}
+.swiper-slide img {
+  transition: transform 0.4s ease;
+}
+.swiper-slide:hover img {
+  transform: scale(1.03);
+}
+.swiper-pagination-bullet { background: #007bff !important; opacity: 0.6; }
+.swiper-pagination-bullet-active {
+  transform: scale(1.3);
+  opacity: 1;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+</head>
 <body>
 <!--[if lt IE 8]>
 	MediaExpertSolution
@@ -182,13 +246,13 @@
 </li><li><a href="contact.html" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">Contact</a></li></ul>
 </div>
 <div class="menu-right-item">
-<div class="search-icon dl-search-icon" style="color: white; background-color: #001f3f; border-radius: 50%; padding: 6px; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); transition: transform 0.3s ease-in-out;">
+<div class="search-icon dl-search-icon" style="color: white; background-color: #001f3f;  padding: 6px; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;  transition: transform 0.3s ease-in-out;">
 <i class="las la-search"></i>
 </div>
 <div class="sidebox-icon dl-sidebox-icon">
 <i class="las la-bars"></i>
 </div>
-<a class="menu-btn" href="rezervare.html" style="background: linear-gradient(to right, #ff4d4d, #ff0000); color: white; padding: 8px 16px; border-radius: 25px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 3px 10px rgba(255, 0, 0, 0.3); transition: transform 0.3s ease-in-out;">Solicitați o mașină</a>
+<a class="menu-btn" href="rezervare.html" style="background: linear-gradient(to right, #ff4d4d, #ff0000); color: white; padding: 8px 16px;  font-weight: bold; font-size: 0.9rem;  transition: transform 0.3s ease-in-out;">Solicitați o mașină</a>
 </div>
 <div class="mobile-menu-icon">
 <div class="burger-menu">
@@ -236,9 +300,9 @@
 <div class="page-header-shape"></div>
 <div class="container">
 <div class="page-header-info">
-<h4>Transport Persoane Premium</h4>
-<h2>Autocar Setra ComfortClass – Eleganță și confort în mișcare</h2>
-<p>Alege NTS TOUR pentru transport de persoane în siguranță, confort și stil, în România și Europa.</p>
+<h4>Transport Privat &amp; Business</h4>
+<h2>Renault Trafic 8+1 – Rapid, confortabil și sigur</h2>
+<p>Ideal pentru transportul eficient al grupurilor mici. Flexibilitate, spațiu și dotări moderne în fiecare cursă.</p>
 </div>
 </div>
 </section>
@@ -248,16 +312,28 @@
 <div class="row align-items-center">
 <div class="col-lg-6">
 <div class="taxi-details-img">
-<img alt="Autocar Setra NTS TOUR" loading="lazy" src="assets/img/autocar-setra-nts-tour.jpg"/>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="assets/img/bus3.webp" alt="Exterior Renault Trafic" loading="lazy" style="max-width: 100%; height: auto; border-radius: 10px;">
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/img/bus23.webp" alt="Interior Renault Trafic" loading="lazy" style="max-width: 100%; height: auto; border-radius: 10px;">
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="section-heading">
 <h4>Flotă NTS TOUR</h4>
-<h2>Autocar Setra ComfortClass S516 HD</h2>
-<p>Autocar modern echipat pentru curse interne și internaționale. Oferă confort premium pentru pasageri, dotări multimedia, spațiu generos pentru bagaje și climatizare automată.</p>
+<h2>Vehicul 8+1 Renault Trafic</h2>
+<p>Vehicul ideal pentru grupuri mici, cu confort, portbagaj mare și climatizare. Perfect pentru transferuri rapide, business și excursii personalizate.</p>
 </div>
-<ul class="taxi-features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px;"><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-bus" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Model:</span> Setra ComfortClass S516 HD</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-users" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Capacitate locuri:</span> 53 + 1 ghid</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-snowflake" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Aer condiționat:</span> Da, climatizare automată</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-suitcase" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Spațiu bagaje:</span> Generos, până la 8m³</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-tv" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Dotări multimedia:</span> TV, USB, WiFi</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-globe" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Trasee:</span> Intern &amp; Internațional</li></ul>
+<ul class="taxi-features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px;"><li style= "  padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; background: #f4f4f4; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-shuttle-van" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Model:</span> Renault Trafic Passenger</li><li style= "  padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; background: #f4f4f4; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-users" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Locuri disponibile:</span> 8 + 1 locuri</li><li style= "  padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; background: #f4f4f4; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-snowflake" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Aer condiționat:</span> Da</li><li style= "  padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; background: #f4f4f4; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-suitcase" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Spațiu bagaje:</span> Portbagaj mare</li><li style= "  padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; background: #f4f4f4; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-headphones" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Sistem audio:</span> Bluetooth, USB</li><li style= "  padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; background: #f4f4f4; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-shield-alt" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Siguranță:</span> ESP, ABS, airbaguri multiple</li><li style= "  padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; background: #f4f4f4; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-road" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Utilizare:</span> Transferuri, excursii private, business VIP</li></ul>
 </div>
 </div>
 </div>
@@ -399,9 +475,7 @@
 <!--/.copyright-wrap-->
 </footer>
 <!--/.footer-section-->
-
 <!--scrollup-->
-
 <!--/.dl-cursor-->
 <!--jQuery Lib-->
 <script defer="defer" src="assets/js/vendor/jquary-3.6.0.min.js"></script>
@@ -417,5 +491,26 @@
 <script defer="defer" src="assets/js/vendor/wow.min.js"></script>
 <script defer="defer" src="assets/js/book-ride.js"></script>
 <script defer="defer" src="assets/js/main.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.swiper-container', {
+      loop: false,
+      slidesPerView: 1,
+      centeredSlides: false,
+      spaceBetween: 0,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+  });
+</script>
 </body>
+
 </html>
