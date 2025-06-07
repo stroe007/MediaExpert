@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 
 <html class="no-js" lang="ro">
-<!--<![MediaExperSolution]-->
+<!--<![MediaExpertSolution]-->
 <head>
-<meta charset="utf-8"/>
+<title>Rezervări Transport | Alege Autocar, Microbuz sau 8+1 | NTS TOUR</title><meta content="Rezervă ușor un autocar, microbuz sau 8+1 pentru transport persoane, excursii sau muncă. NTS TOUR îți oferă confort, siguranță și profesionalism. Completează formularul online!" name="description"/><meta content="Formular Rezervare Transport - NTS TOUR" property="og:title"/><meta content="Completează online formularul NTS TOUR pentru rezervarea serviciilor de transport. Rapid, sigur și adaptat nevoilor tale!" property="og:description"/><meta content="https://ntstour.ro/assets/img/logo-dark.webp" property="og:image"/><meta content="https://ntstour.ro/rezervare.html" property="og:url"/><meta content="index, follow" name="robots"/><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Microbuz Mercedes-Benz Sprinter 22+1 locuri – ideal pentru transport muncitori, delegații, evenimente. Confort, spațiu și siguranță. Parte din flota NTS TOUR." name="description"/>
-<meta content="Stroe Marius" name="Stroe Marius"/>
-<title>NTS TOUR </title>
+<meta content="MediaExpertSolution" name="Stroe Marius"/>
 <link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
 <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="assets/css/animate.min.css" rel="stylesheet"/>
@@ -154,7 +152,7 @@
 <a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">Despre Noi</a>
 <ul>
 <li><a href="despre-noi.html">Despre NTS TOUR</a></li>
-<li><a href="echipanoastra.html">Echipa noastră</a></li>
+<li><a href="echipa.html">Echipa noastră</a></li>
 <li><a href="detalii-servicii.html">Detalii Servicii</a></li>
 <li><a href="parereata.html">Păreri Clienți</a></li>
 <li><a href="pagina-aplicare.html">Hai în echipă</a></li></ul>
@@ -233,35 +231,59 @@
 <div class="page-header-shape"></div>
 <div class="container">
 <div class="page-header-info">
-<h4>Transport Grupuri &amp; Companii</h4>
-<h2>Microbuz Mercedes Sprinter – Spațiu și siguranță în mișcare</h2>
-<p>Ideal pentru transport muncitori, delegații sau grupuri. Microbuz modern, confortabil, cu dotări de top pentru curse în România și Europa.</p>
+<h4>Alege destinația </h4>
+<h2>De restul <span>ne ocupăm noi.</span></h2>
+<p>Transport turistic, pentru muncitori, evenimente sau marfă<br/>NTS TOUR îți oferă soluția completă, sigură și confortabilă. </p>
 </div>
 </div>
 </section>
 <!--/.page-header-->
-<section class="taxi-details bd-bottom padding">
+<div class="taxi-booking bg-grey padding">
 <div class="container">
-<div class="row align-items-center">
-<div class="col-lg-6">
-<div class="taxi-details-img">
-<img alt="Microbuz Mercedes Sprinter - NTS TOUR" loading="lazy" src="assets/img/microbuz-mercedes-nts-tour.jpg"/>
+<div class="row">
+<div class="col-lg-10 offset-lg-1">
+<form action="book-ride.php" id="book-taxi-ride">
+<div class="taxi-booking-form">
+<div class="form-field">
+<i class="las la-user-tie"></i>
+<input class="form-control" id="full-name" name="full-name" placeholder="Nume" required="" type="text"/>
+</div>
+<div class="form-field">
+<i class="las la-envelope-open"></i>
+<input class="form-control" id="email" name="email" placeholder="Adresa Email" required="" type="email"/>
+</div>
+<div class="form-field">
+<i class="las la-tags"></i>
+<select class="niceSelect" id="package-type" name="package-type">
+<option value="standard">Autocar</option>
+<option value="business">Microbuz</option>
+<option value="economy">8+1</option>
+<option value="vip-spacial">Camion</option>
+</select>
+</div>
+<div class="form-field">
+<i class="las la-map-marker"></i>
+<input class="form-control" id="start-dest" name="start-dest" placeholder="Locul de plecare" required="" type="text"/>
+</div>
+<div class="form-field">
+<i class="las la-map-marker"></i>
+<input class="form-control" id="end-dest" name="end-dest" placeholder="Locul de Sosire" required="" type="text"/>
+</div>
+<div class="form-field">
+<i class="las la-calendar"></i>
+<input class="form-control date-picker" id="ride-date" name="ride-date" placeholder="Selectează perioada" required="" type="text"/>
+</div>
+<div class="form-field">
+<button class="default-btn" id="submit" type="submit">Rezervă acum!</button>
 </div>
 </div>
-<div class="col-lg-6">
-<div class="section-heading">
-<h4>Flotă NTS TOUR</h4>
-<h2>Microbuz Mercedes-Benz Sprinter 22+1 locuri</h2>
-<p>Microbuz spațios, ideal pentru transport muncitori, firme, delegații sau excursii. Dotări premium: aer condiționat, prize, internet WiFi, scaune confortabile.</p>
-</div>
-<ul class="taxi-features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px;"><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-shuttle-van" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Model:</span> Mercedes-Benz Sprinter</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-users" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Locuri disponibile:</span> 22 + 1 locuri</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-snowflake" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Aer condiționat:</span> Da, climatizare automată</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-suitcase" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Spațiu bagaje:</span> Generos, până la 4m³</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-tv" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Dotări multimedia:</span> USB, microfon, boxe ambientale</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-plug" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Prize la bord:</span> 12V &amp; USB</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-wifi" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Internet:</span> WiFi disponibil</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-globe" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Utilizare:</span> Transport muncitori, firme, evenimente</li></ul>
+<div class="alert" id="form-messages" role="alert"></div>
+</form><!-- Booking Form -->
 </div>
 </div>
 </div>
-</section>
-<!--/.bus-details-->
-<!-- Carousel Arrows -->
-<!--/.related-taxi-->
+</div>
+<!--/.booking-form-->
 <footer class="footer-section">
 <div class="footer-top-wrap bg-grey">
 <div class="container">
@@ -395,7 +417,9 @@
 <!--/.copyright-wrap-->
 </footer>
 <!--/.footer-section-->
+
 <!--scrollup-->
+
 <!--/.dl-cursor-->
 <!--jQuery Lib-->
 <script defer="defer" src="assets/js/vendor/jquary-3.6.0.min.js"></script>
