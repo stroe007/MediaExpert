@@ -61,7 +61,38 @@
   overflow: hidden;
   height: 0;
 }
-</style></head>
+</style>
+
+<style>
+.taxi-details-img::before {
+  content: none !important;
+  display: none !important;
+}
+</style>
+
+
+<style>
+.swiper-slide {
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid rgba(255, 215, 0, 0.4);
+  border-radius: 18px;
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.25);
+}
+
+/* Ascundem complet săgețile din swiper */
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+</style>
+</head>
 <body>
 <!--[if lt IE 8]>
 	MediaExpertSolution
@@ -160,7 +191,6 @@
 <li><a href="pagina-aplicare.html">Hai în echipă</a></li></ul>
 </li><li class="dropdown_menu"><a href="#" style="color: red; font-weight: bold; font-size: 1.1em; text-shadow: 0 0 5px red; animation: redglow 1.5s ease-in-out infinite alternate;">🧭 Excursii</a><ul><li><a href="excursiezi.html">Excursie 1 zi</a></li><li><a href="exploreazaromania.html">Explorează România</a></li><li><a href="exploreazarolumea.html">Explorează Lumea</a></li></ul></li><li class="dropdown_menu">
 <a href="galerie.html" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">Galerie</a>
-
 </li><li class="dropdown_menu">
 <a href="#" style="color: #ffffff; font-weight: bold; text-shadow: 0 0 8px #000;animation: blackglow 1.5s ease-in-out infinite alternate;">Flotă</a>
 <ul>
@@ -231,30 +261,60 @@
 <div id="sidebox-overlay"></div>
 <section class="page-header">
 <div class="page-header-shape"></div>
-<div class="container">
+<div class="container-fluid">
 <div class="page-header-info">
 <h4>Transport Persoane Premium</h4>
-<h2>Autocar Setra ComfortClass – Eleganță și confort în mișcare</h2>
+<h2>Autocar Mercedes-Benz Intouro – Eleganță și confort în mișcare</h2>
 <p>Alege NTS TOUR pentru transport de persoane în siguranță, confort și stil, în România și Europa.</p>
 </div>
 </div>
 </section>
 <!--/.page-header-->
 <section class="taxi-details bd-bottom padding">
-<div class="container">
+<div class="container-fluid">
 <div class="row align-items-center">
 <div class="col-lg-6">
 <div class="taxi-details-img">
-<img alt="Autocar Setra NTS TOUR" loading="lazy" src="assets/img/autocar-setra-nts-tour.jpg"/>
+<div class="swiper-container taxi-image-slider" style="width: 100%;">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<img alt="Mercedes Travego" loading="lazy" src="assets/img/mercedesconventii1.webp" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
+</div>
+<div class="swiper-slide">
+<img alt="Mercedes Travego" loading="lazy" src="assets/img/mercedesconventii2.webp" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
+</div>
+</div>
+<!-- Navigation Arrows -->
+
+
+<div class="swiper-pagination"></div>
+</div>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="section-heading">
 <h4>Flotă NTS TOUR</h4>
-<h2>Autocar Setra ComfortClass S516 HD</h2>
-<p>Autocar modern echipat pentru curse interne și internaționale. Oferă confort premium pentru pasageri, dotări multimedia, spațiu generos pentru bagaje și climatizare automată.</p>
+<h2>Mercedes-Benz Intouro – Transport Convenții</h2>
+<p>Mercedes Intouro este alegerea ideală pentru transportul eficient al grupurilor mari în cadrul convențiilor, evenimentelor corporate sau al curselor speciale. Oferă confort esențial, durabilitate și spațiu generos, adaptat nevoilor profesionale.</p>
 </div>
-<ul class="taxi-features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px;"><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-bus" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Model:</span> Setra ComfortClass S516 HD</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-users" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Capacitate locuri:</span> 53 + 1 ghid</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-snowflake" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Aer condiționat:</span> Da, climatizare automată</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-suitcase" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Spațiu bagaje:</span> Generos, până la 8m³</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-tv" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Dotări multimedia:</span> TV, USB, WiFi</li><li style="background: #f4f4f4; border-radius: 10px; padding: 14px 18px; font-size: 1.05rem; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"><span><i class="las la-globe" style="font-size: 1.5rem; color: #007bff; flex-shrink: 0;"></i> Trasee:</span> Intern &amp; Internațional</li></ul>
+<ul class="taxi-features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px;">
+<li style="background:#f4f4f4;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+<i class="las la-bus" style="font-size:1.5rem;color:#007bff;"></i><span>Model:</span> Mercedes-Benz Intouro</li>
+<li style="background:#f4f4f4;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+<i class="las la-users" style="font-size:1.5rem;color:#007bff;"></i><span>Capacitate:</span> 60 + ghid</li>
+<li style="background:#f4f4f4;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+<i class="las la-snowflake" style="font-size:1.5rem;color:#007bff;"></i><span>Aer condiționat:</span> Ventilație automată</li>
+<li style="background:#f4f4f4;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+<i class="las la-chair" style="font-size:1.5rem;color:#007bff;"></i><span>Scaune:</span> Fixe, ergonomice</li>
+<li style="background:#f4f4f4;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+<i class="las la-tv" style="font-size:1.5rem;color:#007bff;"></i><span>Multimedia:</span> Sistem audio, iluminare ambient</li>
+<li style="background:#f4f4f4;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+<i class="las la-suitcase" style="font-size:1.5rem;color:#007bff;"></i><span>Facilități:</span> Compartiment spațios</li>
+<li style="background:#f4f4f4;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+<i class="las la-globe" style="font-size:1.5rem;color:#007bff;"></i><span>Utilizare:</span>Convenții, evenimente, firme</li>
+<li style="background:#f4f4f4;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+<i class="las la-calendar" style="font-size:1.5rem;color:#007bff;"></i><span>An fabricație:</span> 2009</li>
+</ul>
 </div>
 </div>
 </div>
@@ -264,7 +324,7 @@
 <!--/.related-taxi-->
 <footer class="footer-section">
 <div class="footer-top-wrap bg-grey">
-<div class="container">
+<div class="container-fluid">
 <div class="footer-top">
 <div class="row align-items-end">
 <div class="col-lg-8">
@@ -286,7 +346,7 @@
 </div>
 <!--/.footer-top-wrap-->
 <div class="footer-mid-wrap">
-<div class="container">
+<div class="container-fluid">
 <div class="row">
 <div class="col-lg-3 col-md-6 sm-padding">
 <div class="footer-item">
@@ -351,7 +411,7 @@
 </div>
 <!--/.footer-mid-wrap-->
 <div class="copyright-wrap">
-<div class="container d-flex justify-content-between align-items-start flex-wrap text-center py-4" style="column-gap: 80px; row-gap: 30px;">
+<div class="container-fluid d-flex justify-content-between align-items-start flex-wrap text-center py-4" style="column-gap: 80px; row-gap: 30px;">
 <div class="d-flex flex-column align-items-center">
 <img alt="Date firmă" loading="lazy" src="assets/img/datefirma.webp" style="height: 28px;"/>
 <a class="footer-white-link" href="https://www.listafirme.ro/serban-nts-tour-srl-44975988/">Date firmă</a>
@@ -395,9 +455,7 @@
 <!--/.copyright-wrap-->
 </footer>
 <!--/.footer-section-->
-
 <!--scrollup-->
-
 <!--/.dl-cursor-->
 <!--jQuery Lib-->
 <script defer="defer" src="assets/js/vendor/jquary-3.6.0.min.js"></script>
@@ -413,5 +471,24 @@
 <script defer="defer" src="assets/js/vendor/wow.min.js"></script>
 <script defer="defer" src="assets/js/book-ride.js"></script>
 <script defer="defer" src="assets/js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.taxi-image-slider', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      }
+    });
+  });
+</script>
 </body>
 </html>
